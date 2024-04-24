@@ -23,7 +23,7 @@ theme = "relearn"
   # See the config.toml file from this documentation site to have an example.
   editURL = ""
   # Author of the site, will be used in meta information
-  author = "Uniliva Alves Pereira"
+  author = "Mateus Macedo"
   # Description of the site, will be used in meta information
   description = "Anotações da minha vida de programador."
   # Shows a checkmark for visited pages on the menu

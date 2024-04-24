@@ -14,7 +14,7 @@ Leia sobre a [AWS Certified Developer - Associate. (DVA-C02)](https://aws.amazon
 ---
 
 | Dominio | % do exame |
-| ------- | ---------- |
+| ------- | ---------- |  
 |Domínio 1: Desenvolvimento com os serviços da AWS |32%|
 |Domínio 2: Segurança |26%|
 |Domínio 3: Implantação |24%|
@@ -113,7 +113,7 @@ Armazenamento:
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [AWS Athena](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-athena)
+ - O que é [AWS Athena](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-athena)
 {{% /notice %}}
 
 
@@ -124,7 +124,7 @@ Armazenamento:
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [OpenSearch](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-opensearch)
+ - O que é [OpenSearch](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-opensearch)
 {{% /notice %}}
 
 ---
@@ -164,7 +164,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [AppSync](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#appsync)
+ - O que é [AppSync](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#appsync)
 {{% /notice %}}
 
 ---
@@ -173,7 +173,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
 
 {{% notice style="note" %}}
 > Contextualização:
- - O que é [SQS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-sqs)
+ - O que é [SQS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-sqs)
  {{% /notice %}}
 
 #### Visão extra - desenvolvedor
@@ -187,7 +187,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
     - Tem Throughput ilimitado, e quantidade de mensagem na fila ilimitado.
     - Entrega a mensagem ao menos uma vez para os consumers.
     - Ordena as mensagens buscando o melhor esforço.
-  - **FIFO**
+  - **FIFO** 
     - Tem throughput de 300 msg/s  e 3000 msg/s usando batch.
     - Não tem mensagens duplicadas. Pois tem uma funcionalidade que permite remove-las.
     - Ordena por ordem de chegada.
@@ -210,25 +210,25 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
   - Há também API batch para enviar, deletar e mudar a visibilidade, o que reduz o custo diminuindo a quantidade de chamada ao SQS.
   - **FIFO** conceitos avançados:
     - **de-duplication** - funcionalidade que permite recusar mensagens que estão duplicadas.
-      - O tempo em que ignora uma nova mensagem com o mesmo id e de 5 minutos. A partir desse período não considera a nova mensagem como duplicata.
+      - O tempo em que ignora uma nova mensagem com o mesmo id e de 5 minutos. A partir desse período não considera a nova mensagem como duplicata. 
       - Há dois métodos de de-duplication:
         - Baseado no conteúdo: Gerar um hash sha-256 do body para comparação.
           - Ao se criar a fila, pode setar se ele vai considerar esse método. Caso seleciona o método via ID será opcional.
         - Baseado no ID: Se passa um id de de-duplication ao postar a mensagem.
     - **Message group** - permite agrupar mensagem por um MessageGroupId.
       - Utils quando se que usar a fila para mais de um processo, assim pode se configurar um consumer para considerar apenas as mensagens do grupo.
-      - Porém a ordem só é garantida dentro do grupo.
+      - Porém a ordem só é garantida dentro do grupo.      
       ![image-20230812090743500](assets/image-20230812090743500.png)
 
 
 
 ---
 
-### SNS
+### SNS 
 
 {{% notice style="note" %}}
 > Contextualização:
- - O que é [SNS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-sns)
+ - O que é [SNS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-sns)
  {{% /notice %}}
 
 #### Visão extra - desenvolvedor
@@ -236,7 +236,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
   - **Standard**
     - Notifica a mensagem apenas uma vez para os subscritos. Depois a mensagem e deletada automaticamente.
     - Ordenas as mensagens buscando o melhor esforço.
-  - **FIFO**
+  - **FIFO** 
     - Tem throughput de 300 msg/s  e 3000 msg/s usando batch.
     - Não tem mensagens duplicadas. Pois tem uma funcionalidade que permite remove-las.
     - Ordena por ordem de chegada.
@@ -259,7 +259,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [Kinesis](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-kinesis)
+ - O que é [Kinesis](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-kinesis)
  {{% /notice %}}
 
 #### Visão extra - desenvolvedor
@@ -279,7 +279,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
       - Usar chaves de partições que seja bem distribuídas.
       - Implementar exponential backoff.
       - Aumentar a quantidade de shards.
-
+  
 - **Kinesis Consumer**
   - há dois modos de uso:
     - **Shared (Classic) Fan-out**
@@ -296,7 +296,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
 - **KCL - Kinesis client library**
 ![image-20230812124931088](assets/image-20230812124931088.png)
   - Facilita o consumo dos dados. É uma lib java.
-  - Cada shard pode ser lido apenas por uma instância KCL.
+  - Cada shard pode ser lido apenas por uma instância KCL. 
     - exemplo: 4 shards -> pode se ter no máximo 4 instâncias do KCL
     - Isso significa que o auto scale esta relacionado a quantidade de shard que se tem provisionados.
   - Usa o DynamoDB para guardar o progresso, por isso precisa configurar acessos no IAM. Isso porque pode haver mais de um KCL executando e para que não haja colisão o track é feito usando o DynamoDB.
@@ -319,7 +319,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [MSK](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#msk)
+ - O que é [MSK](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#msk)
 {{% /notice %}}
 
 ---
@@ -328,14 +328,14 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [Step Functions](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-step-functions)
+ - O que é [Step Functions](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-step-functions)
  {{% /notice %}}
 
 - Escrito em json.
 - usado para orquestrar chamada de serviços.
 - Cada etapa é chamado de task.
   - Tem que ter uma entrada e uma saída.
-
+  
 - Tem os tipos:
   - **Choice State** - Testa uma condição para enviar para uma branch (ramificação).
   - **Fail or Succced State** - Execução parada por erro ou sucesso.
@@ -343,7 +343,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
   - **Wait State** - Espera por uma quantidade de tempo.
   - **Map State** - Permite criar um loop.
   - **Parallel State** - Para processos em paralelo.
-
+  
 - Erro handling
   - Quem deve tratar deve ser o Step Function. Isso pois a aplicação deve ter códigos simples.
   - Pode se usar dois tipos de handles:
@@ -352,20 +352,20 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
       ![image-20230819133020147](assets/image-20230819133020147.png)
       - Caso atinga a quantidade máxima de tentativas o **catch** é acionado.
     - **catch** - Pode se adicionar um fluxo alternativo ou uma notificação via eventos.
-      ![image-20230819133240150](assets/image-20230819133240150.png)
-      - Passa se o dados do erros adiante com o **ResultPath**
-      ![image-20230819133353281](assets/image-20230819133353281.png)
+      ![image-20230819133240150](assets/image-20230819133240150.png)    
+      - Passa se o dados do erros adiante com o **ResultPath**    
+      ![image-20230819133353281](assets/image-20230819133353281.png)    
     - Tipos de códigos de erros
       - States.ALL -> Pega todos tipo de erros.
       - States.Timeout -> Pega os timeouts.
       - States.TaskFailed -> Pega falhas de execução.
       - States.Permitions -> Pegas erros de falha de permissão de execução.
   - Tem uma funcionalidade chamada **wait for task token** que funciona como se fosse um callback para dar prosseguimento a execução.
-    - Usado quando se aciona um sistema externo (que não seja um Lambda.).
-    ![image-20230819134054736](assets/image-20230819134054736.png)
+    - Usado quando se aciona um sistema externo (que não seja um Lambda.).  
+    ![image-20230819134054736](assets/image-20230819134054736.png)  
   - Tem a funcionalidade chamada de **Activity Task** para aplicações externas.
     - Aqui se roda um **Activity worker** no EC2, Lambda, ou mobile device, ele realiza poll de tempos em tempos via a API **GetActivityTask** no Step Function em busca de itens a serem processados.
-    - Após finalizar o processamento do item encontrado ele aciona o Step Function via as APIs **SendTaskSuccess** ou **SendTaskFailure** com o output do processamento.
+    - Após finalizar o processamento do item encontrado ele aciona o Step Function via as APIs **SendTaskSuccess** ou **SendTaskFailure** com o output do processamento.  
     - Deve se configurar um timeout, para não ficar esperando para sempre após uma task ser liberada para processamento.
     ![image-20230819134647312](assets/image-20230819134647312.png)
 
@@ -378,7 +378,7 @@ Tempos os seguintes serviços AWS usados para integração de aplicações:
 ### AWS Budget
 
  {{% notice style="note" %}}
-Veja aqui tudo que se precisa saber sobre [Budgets](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-budget)
+Veja aqui tudo que se precisa saber sobre [Budgets](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-budget)
 {{% /notice %}}
 
 
@@ -389,8 +389,8 @@ Veja aqui tudo que se precisa saber sobre [Budgets](https://docs.digital-garden.
 
 {{% notice style="note" %}}
 > Contextualização:
- - O que é [EC2](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ec2)
- - O que é [Security Group](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#security-group)
+ - O que é [EC2](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ec2)
+ - O que é [Security Group](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#security-group)
  {{% /notice %}}
 
  - Key pair
@@ -429,7 +429,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 - Pode ser acessado via **URL**: http://169.254.169.254/latest/meta-data.
   - Permite acessar tanto o user data (script de inicialização) quanto o meta data.Só permite acesso, não preciso negar.
 - Ha duas versões
-  - **IMDSv1**
+  - **IMDSv1** 
     - Acessa diretamente a **URL**: http://169.254.169.254/latest/meta-data.
   - **IMDSv2** -
     - Mais seguro pois agora o acesso é feito em dois passos
@@ -439,14 +439,14 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
     ```
     - Recuperar os dados passando o token via heardes:
     ```shell
-      curl http://169.254.169.254/latest/metadata -H "X-aws-ec2-metadata-token: $TOKEN"
+      curl http://169.254.169.254/latest/metadata -H "X-aws-ec2-metadata-token: $TOKEN" 
       ```
 - Quando se configura credencias para a instância ela usa o **IMDS** para recuperar-las usando a chamada
 ```shell
   curl  -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/metadata/identity-credentials/ec2/security-credentials/ec2-instance
 ```
 
-
+  
 
 
 ---
@@ -455,8 +455,8 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [ELB](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#elastic-load-balancing)
- - O que é um [ALG](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#auto-scaling-group-alg)
+ - O que é [ELB](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#elastic-load-balancing)
+ - O que é um [ALG](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#auto-scaling-group-alg)
  {{% /notice %}}
 
 
@@ -467,7 +467,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [Beanstalk](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-elastic-beanstalk
+ - O que é [Beanstalk](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-elastic-beanstalk
 )
  {{% /notice %}}
 
@@ -493,7 +493,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
   ![image-20230807090025037](assets/image-20230807090025037.png)
   - **All at once** - Tudo de uma vez.
     - É mais rápido, mas a instância fica indisponível por algum tempo.
-    - Bom para ambientes de dev e hom.
+    - Bom para ambientes de dev e hom.  
     ![image-20230807084407578](assets/image-20230807084407578.png)
   - **Rolling** - Cria uma nova versão (chamada de **bucket**)  derrubando parte das instâncias já existentes e redireciona o trafego quando a nova versão estiver de pé.
 
@@ -526,7 +526,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
 #### Ciclo de vida (lifecycle police)
 
-- Pode armazenar mais de 1000 versões de aplicações. Deve se remover de tempos em tempos versões antiga.
+- Pode armazenar mais de 1000 versões de aplicações. Deve se remover de tempos em tempos versões antiga. 
 - Para isso uso o Ciclo de vida que pode ser:
   - Baseado em tempo (versões antiga)
   - Baseado em espaço usado (quando se esta ocupando muito espaço com versões antigas)
@@ -565,14 +565,14 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [Lambda](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-lambda)
+ - O que é [Lambda](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-lambda)
  {{% /notice %}}
 
 #### Visão extra - desenvolvedor
 - Linguagem suportadas:
   - Node / Python/ java / c# / Ruby / Golang.
   - Caso seja diferentes dessa pode rodar usando **custom Runtime API** (open source project).
-- As dependências devem ser enviadas juntos com o condigo da Lambda. Respeitando a limitações do tamanho do pacote.
+- As dependências devem ser enviadas juntos com o condigo da Lambda. Respeitando a limitações do tamanho do pacote. 
 - Suporta também **Lambda Contêiner Image**.
   - Criadas usando o Lambda Runtime API.
 - Para atualizar uma Lambda usando o **CloudFormation** deve se realizar o upload o pacote zipado para o S3 e referência-lo no CloudFormation.
@@ -580,13 +580,13 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
   - Caso use para implantar em cross account é necessário ter um Bucket police para permitir acesso ao CloudFormation de cada conta.
 - **Lambda Trigger**
   - Na integração com ELB, os dados do request são transformado em Json e repassados a Lambda.
-    - O ALB suporta o Multi Header values (necessário habilitar no target group), isto é quando se passa **query string parameters** com múltiplos valores eles são convertido para um objeto json como um array.
+    - O ALB suporta o Multi Header values (necessário habilitar no target group), isto é quando se passa **query string parameters** com múltiplos valores eles são convertido para um objeto json como um array.  
     ![image-20230813111039675](assets/image-20230813111039675.png)
 
   - Há dois modos de operação:
     - Síncrono -> Você chama e esperar pela resposta. (as filas e o stream entram aqui, pois existe o **event source mapping** que realiza a chamada síncrona da Lambda).
-    - Assíncrono -> um evento dispara a Lambda, nesse caso a Lambda executa baseados no evento.
-      ![image-20230813112808083](assets/image-20230813112808083.png)
+    - Assíncrono -> um evento dispara a Lambda, nesse caso a Lambda executa baseados no evento.    
+      ![image-20230813112808083](assets/image-20230813112808083.png)    
       - Caso ocorram erros haverá retry sendo:
         - 3 retry no total.
         - 1 minuto após 1ª chamada, depois aguarda 2 minutos.
@@ -594,13 +594,13 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
         - Isso é para evitar duplicar logs e criar loop infinito de retentativas na Lambda.
         - Pode se definir uma DLQ (SNS ou SQS) para notificar sobre falhas (precisa de permissão IAM).
 
-  - Integrações com CW Events  / EventBridge
+  - Integrações com CW Events  / EventBridge 
       - **Via CRON**
         - A cada **x** tempo dispara a Lambda.
       - **Via EventBridge Role** (baseado em um padrão de evento, ex: exclusão de EC2)
         - Trigga quando status sofre mudança.
 
-  - **Event Source Mapping** - Lambda Trigger
+  - **Event Source Mapping** - Lambda Trigger  
     - Responsável por realizar o polling de dados do **Kinesis Data Stream, SQS, DynamoDB Stream** e invocar a Lambda. Em outra palavras é um processo que realiza o polling dos itens e monta os batches para o Lambda processar.
     - há dois tipos:
       - **Stream**
@@ -609,15 +609,15 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
         - Se ocorrer um erro todo batch é reprocessado.
         - Permite informar uma DLQ para caso de erros.
         ![image-20230813204251222](assets/image-20230813204251222.png)
-        - Escalonamento
-          - Uma Lambda por shard
+        - Escalonamento 
+          - Uma Lambda por shard 
           - Caso use paralelizado, processa 10 batches por shard simultaneamente.
       - **Queue**
         - Usado para SQS e SQS FIFO.
         - Pode se configurar o tamanho do batch.
-        - Se configurar a DLQ na Fila, com uma politica de tentativa de erros. Pois DLQ no Lambda é só para chamadas assíncronas, e nesse caso são chamadas síncronas.
+        - Se configurar a DLQ na Fila, com uma politica de tentativa de erros. Pois DLQ no Lambda é só para chamadas assíncronas, e nesse caso são chamadas síncronas.    
         ![image-20230813204547891](assets/image-20230813204547891.png)
-        - O Lambda suporta processamento em ordem FIFO, escalando de acordo com o numero de groups ativos. - Escalonamento
+        - O Lambda suporta processamento em ordem FIFO, escalando de acordo com o numero de groups ativos. - Escalonamento 
           - Para SQS Standard
             - Pode escalar até 60 instância por minuto.
             - Pode processar até 1000 batches de mensagens simultaneamente.
@@ -625,8 +625,8 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
             - Processa a mensagem em ordem desde que estejam no mesmo GrupoID.
             - Scala de acordo com numero de grupo de mensagem ativos.
 
-  - **Event e Context Object**
-    ![image-20230813211306459](assets/image-20230813211306459.png)
+  - **Event e Context Object**  
+    ![image-20230813211306459](assets/image-20230813211306459.png)  
     - Quando uma Lambda é aciona ela recebe dois tipos de dados no formato Json, que são:
       - **Event Object**
         - Contém os dados para que a função processe.
@@ -637,8 +637,8 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
 - **Lambda destination**
   - Após o processamento da Lambda pode se configurá-la para enviar o resultado para outros serviços AWS.
-  - Podendo ser:
-    - Para invocações **assíncronas**:
+  - Podendo ser: 
+    - Para invocações **assíncronas**: 
       - Pode enviar o resultado em caso de sucesso ou falha para SQS, SNS, Lambda, EventBridge.
       - Recomendado usar ao invés de DLQ, por ser uma solução mais direta. (não requer um solução para o processamento da DLQ).
     - Para **event source mapping** do tipo stream.
@@ -653,7 +653,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
       - AWSLambdaSQSQueueExecutionRole -> permite ler do SQS.
       - AWSLambdaVPCAccessExecutionRole -> permite implantar funções Lambda dentro de nosso VPC.
       - AWSLambdaXrayDaemonWriteAccess -> permite carregar dados de rastreamento para o X-Ray.
-      - Recomendado criar uma por Lambda.
+      - Recomendado criar uma por Lambda. 
       - Usada quando a lambda realize o pulling das mensagem via **event source mapping**.
   - **Resource Based police**
   - Para que outros serviços consigam chamar uma Lambda deve se criar uma **Resource Based police**
@@ -667,24 +667,24 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
 
 - **Lambda VPC**
-  - Por padrão as lambdas rodam um uma VPC gerenciada pela AWS a parte, ou seja não na sua VPC.
+  - Por padrão as lambdas rodam um uma VPC gerenciada pela AWS a parte, ou seja não na sua VPC. 
   - Com isso é possível acessar a internet e recursos reginais como DynamoDB e S3.
   - Assim não da para acessar os recursos que são criados na VPC criada na sua conta.
     - Para resolver isso é necessário realizar a implantação da lambda em sua VPC informando o VPC ID, as subnets e grupos de segurança.
     - O o Lambda criar uma ENI nas subnets para conectar a VPC. Precisa ter permissão para criar ENI (API CreateNetworkInterface) ou via role **AWSLambdaENIExecutionRole**.
-    - Também é necessário uma role de acesso chamada **AWSLambdaVPCAccessExecutionRole**.
+    - Também é necessário uma role de acesso chamada **AWSLambdaVPCAccessExecutionRole**.    
     ![image-20230814053259347](assets/image-20230814053259347.png)
   - Lambdas configuradas para rodar em uma VPC em uma subnet publica **não terá acesso a internet ou tera um IP publico.**
-  - Para ter acesso deve se rodar a Lambda em uma subnet privada e usar o NAT Gateway | instance para acessar a internet.
+  - Para ter acesso deve se rodar a Lambda em uma subnet privada e usar o NAT Gateway | instance para acessar a internet.  
   ![image-20230814053746136](assets/image-20230814053746136.png)
 
 - **Lambda performance**
   - CPU esta relacionado a Memória, aumentado memoria aumenta CPU.
   - Deve executar entre 5 segundos e 15 minutos (timeout).
   - Tem o contexto de execução que:
-    - Inicia as dependências de uma Lambda (conexões com banco). É uma péssima ideia iniciar uma conexão com banco de dado na função, pois isso consome do tempo de execução.
+    - Inicia as dependências de uma Lambda (conexões com banco). É uma péssima ideia iniciar uma conexão com banco de dado na função, pois isso consome do tempo de execução.  
     - Para usar é só chamar fora do handle da função.
-    ![image-20230814055326413](assets/image-20230814055326413.png)
+    ![image-20230814055326413](assets/image-20230814055326413.png)    
     - É mantido por um tempo, é pode ser reutilizado por outras execuções (reduzindo tempo de inicialização).
     - Tem acesso ao diretório /tmp, para gravação de arquivos temporários. Será compartilhado com as outra execuções.
       - Para guardar aquivos grandes, que não precisam ser baixados a toda execução.
@@ -695,15 +695,15 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 - **Lambda Layers**
   - Permite criar runtime customizadas.
   - Pode se ter até 5 layers por função de até 250 MB.
-  - Permite externalizar dependências para reuso. Evitando assim perda de tempo com uploads de novas versões.
+  - Permite externalizar dependências para reuso. Evitando assim perda de tempo com uploads de novas versões.  
   ![image-20230814060607313](assets/image-20230814060607313.png)
-
+  
 - **Lambda File System Mounting**
   - Pode acessar o EFS se estiver rodando na VPC da sua conta.
-  - Usa se **EFS Access Point** para isso.
-  ![image-20230814061525148](assets/image-20230814061525148.png)
+  - Usa se **EFS Access Point** para isso.  
+  ![image-20230814061525148](assets/image-20230814061525148.png)  
   - Cada Lambda executando será uma conexão no EFS.
-  - Comparativo
+  - Comparativo  
     ![image-20230814061203377](assets/image-20230814061203377.png)
 
 - **Lambda Concurrency an Throttling**
@@ -716,7 +716,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
 - **Lambda Container Image**
   - Permite executar contêiner criados com base na **Lambda Runtime API** de até 10 GB de tamanho.
-  - A vantagem é que a imagem vai está com todas as dependências.
+  - A vantagem é que a imagem vai está com todas as dependências.  
   ![image-20230814071004237](assets/image-20230814071004237.png)
   - Boas praticas:
     - Use sempre imagem Base AWS-provided.
@@ -730,9 +730,9 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
   - Pode ser criar Alias para essa versões.
     - Pode se criar alias por ambiente.
     - Usados para canário deploy, onde se pode adicionar uma segunda versão e colocar pesos no roteamento do tráfego a fim de testar a nova versão.
-    - Não pode referênciar outros alias, apenas versões.
+    - Não pode referênciar outros alias, apenas versões.  
     ![image-20230814071802676](assets/image-20230814071802676.png)
-  - Pode se usar o **Code Deploy** para realizar o traffic shift (roteamento do trafego).
+  - Pode se usar o **Code Deploy** para realizar o traffic shift (roteamento do trafego).  
   ![image-20230814072828143](assets/image-20230814072828143.png)
 
 - **Lambda URL**
@@ -745,7 +745,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
     - Auth Type None -> valida apenas politica Baseada em recurso. Dando acesso a todos.
     - Auth Type AWS_IAM -> valida o principal e a politica baseada em recurso.
       - O principal deve terá a permissão **lambda:InvokeFunctionUrl**.
-
+    
     ![image-20230814183601019](assets/image-20230814183601019.png)
 
 - **Lambda boas praticas**
@@ -758,7 +758,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 
  {{% notice style="note" %}}
 > Contextualização:
- - [SAM](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#sam---serveless-aplication-model)
+ - [SAM](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#sam---serveless-aplication-model)
 {{% /notice %}}
 
 #### Visão extra - desenvolvedor
@@ -767,7 +767,7 @@ echo “Hello World from $(hostname -f)” > /var/www/html/index.html
   - o Arquivo YML (a **receita**) chamado **template.yaml**, que depois é transformado em um template do **CloudFormation**.
   - Requer a definição das sessões de **Transform** e do **Resources**.
   - Veja um [exemplo](https://github.com/Uniliva/uni-salva/blob/main/content/02-cloud-notes/01-aws/04-aws-cloud-develop-associate/exemplos-codigos/sam/template.yaml)
-
+  
 - Comandos:
 
 ```shell
@@ -780,13 +780,13 @@ sam build  <options>
 # empacota a aplicação para cloudFormation
 sam package  --s3-bucket <bucket-name> --template-file template.yaml --output-template-file gen/template-generated.yaml
 
-## é equivalente a:
+## é equivalente a: 
 aws cloudformation package  --s3-bucket <bucket-name> --template-file template.yaml --output-template-file gen/template-generated.yaml
 
 # Realiza o deploy
 sam deploy  <options>
 
-## é equivalente a:
+## é equivalente a: 
 aws cloudformation deploy --template-file gen/template-generated.yaml --stack-name <stack name>  --capabilities CAPABILITY_IAM
 
 ## Deploy configuravel via perguntas - realiza perguntas e executa o empacotamento e o deploy num comando só
@@ -813,7 +813,7 @@ sam deploy --guided
     ![image-20230819101018954](assets/image-20230819101018954.png)
 
 - SAM Aplication Repository (SAR).
-  - Permite deployar aplicações que pode ser reutilizadas em outras contas.
+  - Permite deployar aplicações que pode ser reutilizadas em outras contas.  
   ![image-20230819101458761](assets/image-20230819101458761.png)
 
 ---
@@ -838,7 +838,7 @@ sam deploy --guided
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [ECS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-ecs)
+ - O que é [ECS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-ecs)
    {{% /notice %}}
 
 
@@ -885,7 +885,7 @@ Pode escalar por
   - Valida se a instância está aderente as estratégias de alocamento definidas na **task placement strategy**.
   - Aloca na instância selecionada.
 - As **task placement strategy** são
-  - **BinPack**
+  - **BinPack** 
     - Alocará de acordo com memoria ou CPU.
     - Priorizando minimizar os custos.
     ![image-20230804055238263](assets/image-20230804055238263.png)
@@ -958,7 +958,7 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [EKS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-eks)
+ - O que é [EKS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-eks)
    {{% /notice %}}
 
 
@@ -966,7 +966,7 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [ECR](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-ecr)
+ - O que é [ECR](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-ecr)
    {{% /notice %}}
 
 
@@ -979,12 +979,12 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [RDS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#rds)
+ - O que é [RDS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#rds)
 
 - Veja também:
-  - [Backups](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#backups)
-  - [Replicas de leituras](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#read-replicas)
-   - [Multi AZ disastre recover](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#multi-az-disastre-recover)
+  - [Backups](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#backups)
+  - [Replicas de leituras](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#read-replicas)
+   - [Multi AZ disastre recover](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#multi-az-disastre-recover)
    {{% /notice %}}
 
 - Para converte um instância do **RDS** de Sigle AZ para **Multi AZ**, só é necessario alterar o banco e mudar nas configurações. E isso não gera disponibilidade.
@@ -995,7 +995,7 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [Aurora](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aurora)
+ - O que é [Aurora](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aurora)
  {{% /notice %}}
 
 ---
@@ -1004,7 +1004,7 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [DynamoDB](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#dynamodb)
+ - O que é [DynamoDB](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#dynamodb)
  {{% /notice %}}
 
 #### Visão extra - desenvolvedor
@@ -1012,9 +1012,9 @@ Tasks definitions
 - Tipos de dados aceitos nos atributos:
   - Tipo escalares -> String, number, Binary, Boolean, Null.
   - Documentos -> Map, List.
-  - Conjuntos -> String Set, Number Set, Binary Set
+  - Conjuntos -> String Set, Number Set, Binary Set  
 - Caso provisione os WCU e RCU, e exceda pode se usar temporariamente o **Burst Capacity**, que permite ter um Throughput extra.
-  - Mas se excede-lo receberá um exception do tipo **ProvisionedThroughputExceededException**.
+  - Mas se excede-lo receberá um exception do tipo **ProvisionedThroughputExceededException**.  
 - Tem uma funcionalidade de auto scale que reconfigura os valores de WCU e RCU de acordo com o uso.
 - Operações
   - **Write**
@@ -1023,7 +1023,7 @@ Tasks definitions
     - Conditional expression for Writes -> Adiciona / Deleta / Atualiza de acordo com uma condição.
       - Bom para quando a itens concorrentes. Pois tem uma funcionalidade chamada de **Optimistic Locking** que evita que atualizações / delete enquanto esta sendo atualizado ou deletado.
         - Cada item tem um atributo para validação como se fosse uma versão.
-
+      
       ![image-20230815201126518](assets/image-20230815201126518.png)
   - **Read**
     - GetItem -> recuperar um item através das PK ou PK + SK.
@@ -1051,7 +1051,7 @@ Tasks definitions
       - São recuperados em paralelos o que diminui a latência.
   - **PartQL** - Permite executar queries semelhante ao SQL (insert, select, update, delete).
     - Não permite realização de JOINs.
-
+  
 - **DynamoDB Streams** - Stream das alterações que ocorrem no banco de dados.
   ![image-20230815204431459](assets/image-20230815204431459.png)
   - Retém os dados por 24 horas. Feito de Shards como o Kineses.
@@ -1073,7 +1073,7 @@ Tasks definitions
 - **DynamoDB Transactions**
   - Serve para criar transações no dynamo (em uma ou mais tabelas), ou seja tudo é inserido ou nada.
   - Serve para situações onde se depende que todos os itens sejam salvos (quando as informações estão quebradas em tabelas).
-  - Usados para ACID com Leituras e Escritas e consome 2 WCU na escrita ou 2 RCU na leitura.
+  - Usados para ACID com Leituras e Escritas e consome 2 WCU na escrita ou 2 RCU na leitura.  
   ![image-20230815211858410](assets/image-20230815211858410.png)
 
 
@@ -1082,7 +1082,7 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - O que é [ElastiCache](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#elasticache)
+ - O que é [ElastiCache](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#elasticache)
  {{% /notice %}}
  - Estrategias de cache
    - **Lazy loading / Cache aside / Lazy population**
@@ -1122,7 +1122,7 @@ Tasks definitions
 ### AWS CodeArtifact
 - Gerenciador de artefatos - como o Frog ou o maven ou npmjs.
 - Permite armazenar os artefatos gerados (libs (dependências) e aplicações).
-- Tem boa integração com quase todas as ferramentas de dependências (maven, pip, npm, etc).
+- Tem boa integração com quase todas as ferramentas de dependências (maven, pip, npm, etc). 
 - Fica em nivel de VPC. Não guarda todas as dependências apenas as suas, as que já são livres ele apenas realiza um proxy buscando do repo original (por exemplo do Maven Central).
 - Cachea as dependências mais usadas
 - Contém dominios e dentro há repositórios.
@@ -1132,7 +1132,7 @@ Tasks definitions
 - Um repositório pode apontar para outros repositórios (**upstream repository**).
   - Permite ter apenas um URL para varios repos.
   - Pode se ter até 10 **upstream repository**
-  - E Apenas uma conexão externa (link para um repo publico como o maven) por repo.
+  - E Apenas uma conexão externa (link para um repo publico como o maven) por repo.  
   ![image-20230819073621158](assets/image-20230819073621158.png)
 - Dominios
 ![image-20230819074022929](assets/image-20230819074022929.png)
@@ -1182,7 +1182,7 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - entenda o [CodeDeploy](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#code-deploy)
+ - entenda o [CodeDeploy](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#code-deploy)
 {{% /notice %}}
 
 - Precisa de uma IAM Role para acessar os recursos EC2/ Lambda/ S3.
@@ -1202,7 +1202,7 @@ Tasks definitions
   -  ECS
      - Usa somente a estratégias de **Blue/Green** para deploy.
 - Permite realizar rollback, caso erro ou via alarmes do **CW**.
-- Permite controlar a granularidade dos deploy (estratégias de deploy).
+- Permite controlar a granularidade dos deploy (estratégias de deploy). 
   - in-place / linear / blue Green.
 - Usa o arquivo chamado **appspec.yml**, o passo a passo do deploy.
 - Erros comuns
@@ -1264,7 +1264,7 @@ Tasks definitions
 
  {{% notice style="note" %}}
 > Contextualização:
- - Armazenamento [CodeGuru](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#codeguru)
+ - Armazenamento [CodeGuru](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#codeguru)
 {{% /notice %}}
 
 - Suporta Java e Python.
@@ -1297,13 +1297,13 @@ Tasks definitions
   - Como configurar no beanStalk:
     - Pode se habilita através da extensões ou ao criar habilitando a flag em serviços.
     - Precisa que a role atribuída tenha acesso ao X-Ray.
-  - Como configurar no ECS:
-    - Usa porta 2000 e protocolo UDP,
+  - Como configurar no ECS: 
+    - Usa porta 2000 e protocolo UDP, 
     - Usa a variável de ambiente AWS_XRAY_DAEMON_ADDRESS para indicar o url do daemon.
     - Há 2 formas de se fazer:
       - Habilitando o daemon na instância do cluster.
       - Habilitando um contêiner que será um **sidecar** com o daemon.
-      - Caso Fargate, usa o modelo **sidecar**.
+      - Caso Fargate, usa o modelo **sidecar**.      
       ![image-20230813080418098](assets/image-20230813080418098.png)
 - **Tracer**
   - Pode se habilitar para cada request ou por um percentual delas.
@@ -1311,7 +1311,7 @@ Tasks definitions
 - **Security**
   - Usa IAM para autorização.
   - Guarda os dados em repouso encriptado.
-- Conceitos
+- Conceitos 
   - **Segment** - Representa uma aplicação, cada uma tem um.
   - **SubSegments** - Pode se querer granularizar uma aplicação, caso a api tenha dois endpoint pode se criar uma para cada.
   - **Trace** - Segmentos coletados junto do começo ao fim em um request por exemplo.
@@ -1319,14 +1319,14 @@ Tasks definitions
     - Por padrão envia a primeira requisição a cada segundo e 5% das demais requisições naquele segundo.
       - **reservoir** - é como chamada a o percentual de dados coletados na primeira interação.
       - **rate** - é como é chamado a requisições adicionais.
-    - Pode se definir os valores do  **reservoir** e **rate** em uma **regra se sampling** para coletar mais ou menos dados. (Não precisa reiniciar a aplicação para isso)
+    - Pode se definir os valores do  **reservoir** e **rate** em uma **regra se sampling** para coletar mais ou menos dados. (Não precisa reiniciar a aplicação para isso)    
     ![image-20230813074728747](assets/image-20230813074728747.png)
   - **Annotations** - Mapa de chave e valor usados para indexar os traces e para realizar filtros.
   - **Metadata** - Informações adicionais, que não são indexadas e não são usadas para filtros.
 - **API**
-  - APIs que o daemon precisa para escrever os traces.
-  ![image-20230813075251286](assets/image-20230813075251286.png)
-  - APIs que o daemon precisa para ler os traces.
+  - APIs que o daemon precisa para escrever os traces.  
+  ![image-20230813075251286](assets/image-20230813075251286.png)  
+  - APIs que o daemon precisa para ler os traces.  
   ![image-20230813075450709](assets/image-20230813075450709.png)
 - **Como usar**
 ![image-20230813071856713](assets/image-20230813071856713.png)
@@ -1358,7 +1358,7 @@ Tasks definitions
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [CloudFormation](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-cloudformation)
+ - O que é [CloudFormation](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-cloudformation)
 {{% /notice %}}
 
 #### Extra
@@ -1386,7 +1386,7 @@ Tasks definitions
     - Não é possível deletar uma stack, quem tem o output usado em outra stack. Ou seja não pode deletar pois há uma dependência.
     ![image-20230810200306843](assets/image-20230810200306843.png)
     - O campo export é opcional, e usado para renomear o item exportado, pois o nome deve ser único na região.
-    - Para importar use a função **fn::ImportValue** que no YML é **!ImportValue**.
+    - Para importar use a função **fn::ImportValue** que no YML é **!ImportValue**.    
     ![image-20230810200607679](assets/image-20230810200607679.png)
   - **Conditions**: Lista de condições para criação de recursos.
     - Usado para limitar a criação de recursos seja por ambiente (dev. hml, prod), por região (us-east-1) , ou parâmetro, etc.
@@ -1446,7 +1446,7 @@ Tasks definitions
   ![image-20230810204031080](assets/image-20230810204031080.png)
 - **Nested Stacks**
   - Permite criar stack usando outras stack (stack aninhadas).
-  - Usado quando se que aproveitar uma stack já pronta.
+  - Usado quando se que aproveitar uma stack já pronta. 
   - Exemplo a stack que cria ALB, pode ser usada em vários lugares, só alterando os parâmetros. Ela pode usar uma stack que cria o Security Groups.
   ![](assets/cfn-console-nested-stacks.png)
   - Qual a diferença entre **cross** e **Nested Stacks**
@@ -1457,7 +1457,7 @@ Tasks definitions
     - Nested Stack
       - Usado para componentes que será reutilizados.
       - Exemplo: Stack de configurações de um ALB.
-      - Não é uma stack compartilhada, as stack compõem um stack maior.
+      - Não é uma stack compartilhada, as stack compõem um stack maior.    
     ![image-20230810205136667](assets/image-20230810205136667.png)
 
 ---
@@ -1468,7 +1468,7 @@ Tasks definitions
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [CloudTrail](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-cloudtrail)
+ - O que é [CloudTrail](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-cloudtrail)
 {{% /notice %}}
 
 
@@ -1486,11 +1486,11 @@ Tasks definitions
 
 {{% notice style="note" %}}
 > Contextualização:
- - O que é [CDK](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#cdk)
+ - O que é [CDK](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#cdk)
 {{% /notice %}}
 - Permite definir a infra estrutura em uma linguagem de programação.
   - Em: Java | Python | JavaScript / TypScript | .Net.
-- Contém a maioria dos recursos da AWS como **construtores**, onde se chama alterando apenas os campos variaveis.
+- Contém a maioria dos recursos da AWS como **construtores**, onde se chama alterando apenas os campos variaveis. 
 - Caso não encontre o recurso no construtores da AWS, pode se achar no **Constructor Hub**, onde empresas disponibilizam como se fosse **libs** com outras construções para os recursos.
 - O código é compilado para um template do CloudFormation.
 - Bom pois como o CDK se pode validar o template programaticamente.
@@ -1501,7 +1501,7 @@ Tasks definitions
   - **Nivel 3**: Construtores que permite criar mais de um recurso que estão interligados (isso para arquiteturas padrões), ex: lambda que pode conter um api gateway como trigger.
 - Principais comandos:
   ![image-20230819104243582](assets/image-20230819104243582.png)
-  - Entenda o bootstrapping
+  - Entenda o bootstrapping  
   ![image-20230819104504372](assets/image-20230819104504372.png)
 - Para testar usa se o **CDK Assertion Module**.
 ![image-20230819104642772](assets/image-20230819104642772.png)
@@ -1513,7 +1513,7 @@ Tasks definitions
 
 {{% notice style="note" %}}
 > Contextualização:
- - O que é [CloudWatch](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-cloudwatch)
+ - O que é [CloudWatch](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-cloudwatch)
  {{% /notice %}}
 
 #### Visão extra - desenvolvedor
@@ -1531,14 +1531,14 @@ Tasks definitions
     - Permite buscar em múltiplos logs grupos.
   - Pode se criar **métricas** customizadas em cima dos filtros do logs (Metric Filter).
     - Podem ser usadas para disparar alarmes.
-    - Só geram dados com logs gerados a partir da hora que foi configurada.
+    - Só geram dados com logs gerados a partir da hora que foi configurada.    
     ![image-20230812201334076](assets/image-20230812201334076.png)
 - Alarmes
   - Permite criar alarmes compostos, que são agrupamentos de mais de um alarmes usando as condições AND ou OR.
   - Pode se testar se um alarme esta funcionado usando CLI.
 - EventBridge
-  - Para da acesso aos event buses é necessário ter um police.
-  ![image-20230812205210746](assets/image-20230812205210746.png)
+  - Para da acesso aos event buses é necessário ter um police.  
+  ![image-20230812205210746](assets/image-20230812205210746.png)  
   - É possível definir uma estrutura para o evento (schema , tipo Avro), ou usar algum que já existe, com ele é possível definir o formato do evento que vai ser disparado por um SDK.
   - Fluxo
     - Se cria o event Bus que vai receber os eventos e vai encaminhar para um recurso ou um event Role.
@@ -1596,8 +1596,8 @@ aws sts get-session-token --serial-number <arn-do-dispositivo-mfa> --token-code 
 ### AWS Limits (Quotas)
 - **API Rate Limits**
   - Descreve quantas chamadas se pode fazer nas APIs.
-  - exemplos:
-    - a API describeInstances do ec2 é de 100 chamadas por segundo.
+  - exemplos: 
+    - a API describeInstances do ec2 é de 100 chamadas por segundo. 
     - a API getObjects do s3  é de 5500 por segundo por prefix.
   - Para erros intermitentes é recomendado implementar o **exponential backoff**.
   - Para erros consistente (limite ultrapassado sempre) recomenda-se solicitar um aumento no limite no **throttling**.
@@ -1633,7 +1633,7 @@ Descreve a sequência que se usa para recuperar os acessos ao recursos da AWS.
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [Systems Manager](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-systems-manager)
+ - O que é [Systems Manager](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-systems-manager)
 {{% /notice %}}
 
 ---
@@ -1645,7 +1645,7 @@ Descreve a sequência que se usa para recuperar os acessos ao recursos da AWS.
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [API Gateway](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-api-gateway)
+ - O que é [API Gateway](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-api-gateway)
 {{% /notice %}}
 
 #### Visão extra - desenvolvedor
@@ -1667,7 +1667,7 @@ Descreve a sequência que se usa para recuperar os acessos ao recursos da AWS.
         - Permite filtrar e modificar o response.
         - Permite converter json para XML (soap) ou vise e versa.
     - **AWS_PROXY** -> Lambda Proxy - os dados do request são enviado ao Lambda e ela fica responsável por tratar o request e o response.
-      - Não há mapeamento do body, headers ....
+      - Não há mapeamento do body, headers ....      
       ![image-20230816210946923](assets/image-20230816210946923.png)
     - **HTTP_PROXY** -> Não há mapeamento, a requisição é passada ao backend. O retorno só redirecionado.
       - Permite adicionar **headers** tando no request repassado ao backend.
@@ -1693,15 +1693,15 @@ Descreve a sequência que se usa para recuperar os acessos ao recursos da AWS.
 - **WebSocket**
   - Para aplicações bidirecionais com webSocket.
   - Usado pra chats, games ou aplicações que precisa manter conexão abertas.
-  - Armazena o ConnectionId no DynamoDB que será usado para futuras interações
-  ![image-20230817063740110](assets/image-20230817063740110.png)
-  - exemplo
-  ![image-20230817063810397](assets/image-20230817063810397.png)
+  - Armazena o ConnectionId no DynamoDB que será usado para futuras interações  
+  ![image-20230817063740110](assets/image-20230817063740110.png)  
+  - exemplo  
+  ![image-20230817063810397](assets/image-20230817063810397.png)  
   - Como funciona o retorno da comunicação.
     - Tem se um callback, onde pode ser enviadas mensagens de respostas.
-    - Aceita as operações Get, Post, Delete.
-    ![image-20230817063923162](assets/image-20230817063923162.png)
-  - Roteamento das requisições
+    - Aceita as operações Get, Post, Delete.  
+    ![image-20230817063923162](assets/image-20230817063923162.png)  
+  - Roteamento das requisições  
   ![image-20230817064204981](assets/image-20230817064204981.png)
 
 ---
@@ -1710,7 +1710,7 @@ Descreve a sequência que se usa para recuperar os acessos ao recursos da AWS.
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [CloudFront](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-cloudfront)
+ - O que é [CloudFront](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-cloudfront)
 {{% /notice %}}
 Para que o CloudFront possa armazenar o cache ele gera a **cache key** que:
 - Por default é formada o hostname + path do recurso.
@@ -1726,7 +1726,7 @@ Para que o CloudFront possa armazenar o cache ele gera a **cache key** que:
 **Classes de cobrança**
 - **all - all regions** - engloba todas as edge locations e tem melhor performance.
 - **200 - most regions** - exclui as regiões mas caras.
-- **100** - as regiões mais baratas.
+- **100** - as regiões mais baratas. 
 ![image-20230731064707171](assets/image-20230731064707171.png)
 **Logs em tempo real**
 ![image-20230731065011189](assets/image-20230731065011189.png)
@@ -1738,7 +1738,7 @@ Para que o CloudFront possa armazenar o cache ele gera a **cache key** que:
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [Route 53](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-route-53)
+ - O que é [Route 53](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-route-53)
    {{% /notice %}}
 
 
@@ -1760,7 +1760,7 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 
 > Leitura recomendada:
 
- - [VPC para arquitetos](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-vpc)
+ - [VPC para arquitetos](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-vpc)
    {{% /notice %}}
 
 
@@ -1769,10 +1769,10 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 
 {{% notice style="note" %}}
 > Leitura recomendada:
- - [RDS Security](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#rds-security)
+ - [RDS Security](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#rds-security)
 
 
- - [SSL encryptation, SNI e MITM](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ssl-encryptation-sni-e-mitm)
+ - [SSL encryptation, SNI e MITM](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ssl-encryptation-sni-e-mitm)
 {{% /notice %}}
 
 ---
@@ -1782,7 +1782,7 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [AWS Certificate Manager](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-certificate-manager)
+ - O que é [AWS Certificate Manager](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-certificate-manager)
 {{% /notice %}}
 
 ---
@@ -1792,7 +1792,7 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 {{% notice style="note" %}}
 > Contextualização:
 
- - leiaa sobre [Identity Federation & Congnito](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#identity-federation--congnito)
+ - leiaa sobre [Identity Federation & Congnito](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#identity-federation--congnito)
 {{% /notice %}}
 - Permite que usuários de fora da AWS possa ter acesso a recurso da AWS.
 - Ha dois produtos disponiveis:
@@ -1803,16 +1803,16 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
   - Integrado com **API Gateway** e **Load Balancer**, para autenticação.
   - Permite a criação de login simples (email ( ou user) e senha).
   - Fornece reset de senha e validação de email e telefone.
-  - Fornece MFA.
+  - Fornece MFA. 
     - Pode ser usado com autenticação adaptativa, onde se caso se suspeite da tentativa (pela localização, IP ou dispositivo) de login se solicita o MFA.
   - Permite usar autenticação externas (de terceiros , Google, Facebook).
-  - Gerar JWT para logins.
-  ![image-20230819113213870](assets/image-20230819113213870.png)
+  - Gerar JWT para logins.  
+  ![image-20230819113213870](assets/image-20230819113213870.png)  
   - Permite usar SES para enviar emails.
-  - Tem um UI propria para cadastro e reset de senha.
+  - Tem um UI propria para cadastro e reset de senha. 
     - É possivel customizá-la.
     - E possivel fornece sua própria interface de login.
-  - Pode se usar um domínio customizado para a API / URL de login.
+  - Pode se usar um domínio customizado para a API / URL de login.  
     - Para isso é necessário criar um Certificado no ACM.
   - Tem a opção de realizar um callback em caso de login sucesso.
     ![image-20230819111427615](assets/image-20230819111427615.png)
@@ -1860,13 +1860,13 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
   - **identity provider (idp)** - Permite customizado acesso provider de terceiros e liberara acesso via token de acesso do STS.
 - **IAM Conditions**
   - Permite adicionar condições nas políticas de acessos AWS.
-    [![conditions](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate/assets/image-20210907124841446.png)](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate.html#image-167ee62909f74073da7853a674734374)
+    [![conditions](https://docs.uniii.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate/assets/image-20210907124841446.png)](https://docs.uniii.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate.html#image-167ee62909f74073da7853a674734374)
 - **IAM Permission Boundaries** (limite de permissões)
   - Quando se criar usuário ou **Roles** e possível dar **permissão genéricas,** tipo de administrador , e setar um **limite** para essas permissões, exemplo o cara é administrado apenas nos recursos do S3.
   - SCP (Service control policies ).
-    [![limite](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate/assets/image-20210907130021397.png)](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate.html#image-de03a6f085724008f9923afa31e24703)
+    [![limite](https://docs.uniii.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate/assets/image-20210907130021397.png)](https://docs.uniii.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate.html#image-de03a6f085724008f9923afa31e24703)
 - **Lógica da avaliação de política**
-[![Lógica da avaliação de política - AWS Identity and Access Management](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate/assets/PolicyEvaluationHorizontal.png)](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate.html#image-bb88ec8672b017a01d1b1d9da984a184)
+[![Lógica da avaliação de política - AWS Identity and Access Management](https://docs.uniii.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate/assets/PolicyEvaluationHorizontal.png)](https://docs.uniii.com.br/02-cloud-notes/01-aws/01-aws-cloud-architect-associate.html#image-bb88ec8672b017a01d1b1d9da984a184)
 
 #### MFA (multi factory atutenticator)
 
@@ -1895,35 +1895,35 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [KMS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-kms)
+ - O que é [KMS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-kms)
 {{% /notice %}}
 
 #### Visão extra - desenvolvedor
 - Todas as chamadas são logadas no CloudTrail.
-- Copiando snapshot criptografado entre regiões.
+- Copiando snapshot criptografado entre regiões. 
   ![image-20230820083428692](assets/image-20230820083428692.png)
 - Tem uma IAM police semelhante ao S3. A unica diferença é que se pode tem uma condição IAM, onde se informa qual conta vai chamar e via qual serviço.
 - Como funciona:
-  ![image-20230820085154740](assets/image-20230820085154740.png)
+  ![image-20230820085154740](assets/image-20230820085154740.png)  
 - Isso para dados com tamanho até 4KB. Para maiores deve se usa o **Envelope Encrytion** que seria a API **GenarateDataKey**.
-  - Nesse a computação para criptografar e descritografar é feita do lado do cliente.
-  - Para criptografar:
-  ![image-20230820085535921](assets/image-20230820085535921.png)
-  - Para Descriptografar
+  - Nesse a computação para criptografar e descritografar é feita do lado do cliente. 
+  - Para criptografar:  
+  ![image-20230820085535921](assets/image-20230820085535921.png)  
+  - Para Descriptografar  
   ![image-20230820085703643](assets/image-20230820085703643.png)
   - Por se complexo, geralmente usa-se o SDK para realizar essas operações.
-    - Este tem uma funcionalidade de cache do Data Key. Usado para diminuir a quantidade de chamada aos KMS.
+    - Este tem uma funcionalidade de cache do Data Key. Usado para diminuir a quantidade de chamada aos KMS.  
 - APIs do KMS
   - **Encrypt** -> usada para criptografar objetos de até 4KB direto no KMS.
   - **GenerateDataKey** -> Usada para gerar uma **Data Key Simétrica** unica (DEK), que vai ser usada pra criptografar objetos maiores que 4kb.
     - Retorna a **Data Key Simétrica** e texto
-    - **E** ele criptografado com a chave que foi chamada na API.
+    - **E** ele criptografado com a chave que foi chamada na API.  
  - **GenerateDataKeyWithoutPlaintext** -> Semelhante a anterior, a unica diferença e que não retorna a **Data Key Simétrica** e texto, sendo necessário descriptografar depois
-   - É mais demorado, pois precisa fazer duas operações.
+   - É mais demorado, pois precisa fazer duas operações.   
  - **Decypt** -> usada para descriptografar objetos de até 4KB direto no KMS (usado para descriptografar a **Data Key Simétrica** caso use a API **GenerateDataKeyWithoutPlaintext** ).
  - **GenerateRandom** -> gerar uma Byte String randômica.
-- Limites do KMS
-  ![image-20230820091745673](assets/image-20230820091745673.png)
+- Limites do KMS  
+  ![image-20230820091745673](assets/image-20230820091745673.png)  
   - Cotas
     - É um soft limit, pode se aumentar através da API e aumento de contas ou através do AWS Support.
     - Para chamadas de criptografia, é compartilhado a mesma cota.
@@ -1942,13 +1942,13 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [STS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#sts)
+ - O que é [STS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#sts)
 {{% /notice %}}
 
 - Permite acesso temporário aos recursos de 15 minutos a até 1 hora.
 
 - Para adicionar MFA precisa adicionar a **IAM police** uma **IAM condition** chamada aws:MultiFactorAuthPresent:true
-  - A API **GetSessionToken** vai retorna o Access ID, Secret Key e o Session Token.
+  - A API **GetSessionToken** vai retorna o Access ID, Secret Key e o Session Token. 
 
 
 
@@ -1960,13 +1960,13 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [AWS SSM Parameter Store](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-ssm-parameter-store)
+ - O que é [AWS SSM Parameter Store](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-ssm-parameter-store)
 {{% /notice %}}
 
 - Apis
-  - **GetParameters** - Retorna os parametros de acordo o o nome passado na flag --names (pode ser mais de um).
+  - **GetParameters** - Retorna os parametros de acordo o o nome passado na flag --names (pode ser mais de um). 
     - Pode se usar a flag **--with-decription** para retonar o valor parametros com valor descriptografado.
-  - **GetParametersByPath** - Retorna os todos os parametros contidos no path passado na flag --path.
+  - **GetParametersByPath** - Retorna os todos os parametros contidos no path passado na flag --path. 
     - Pode se usar a flag **--with-decription** para retonar o valor parametros com valor descriptografado.
     - Pode se usar o flag **--recursive** para retonar recursivamente os parametro dentro do path.
 - Caso use a flag **--with-decription** é necesssario ter a permissão do KMS de **Decypt** do KMS.
@@ -1977,7 +1977,7 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [Secrets Manager](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-secrets-manager)
+ - O que é [Secrets Manager](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#aws-secrets-manager)
 {{% /notice %}}
 
 - Quando criar banco de dados RDS e Aurora via CloudFormation pode se usar a opção **ManageMasterUserPasseorg** que vai criar os segregos do banco automaticamente com até esquema de rotação.
@@ -1997,12 +1997,12 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 
  {{% notice style="note" %}}
 > Contextualização:
- - Armazenamento [guia completo AWS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#storage)
+ - Armazenamento [guia completo AWS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#storage)
 
  Veja direto o que é:
- - [EBS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ebs---elastic-block-storage)
- - [Instance store](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#instance-store)
- - [EFS](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#efs---elastic-file-system)
+ - [EBS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ebs---elastic-block-storage)
+ - [Instance store](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#instance-store)
+ - [EFS](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#efs---elastic-file-system)
 {{% /notice %}}
 
 
@@ -2010,11 +2010,11 @@ Não cai muitas coisas sobre isso na prova da certificação develop, mas é imp
 ---
 
 
-### S3
+### S3 
 
  {{% notice style="note" %}}
 > Contextualização:
- - [S3](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-s3)
+ - [S3](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#amazon-s3)
 
 Uma questão comum quanto ao S3 é como melhorar o tempo de busca de arquivos, a arquitetura que melhora resolve esse problema seria criar um index no DynamoDB com os metadados e tags do arquivos e realizar as busca no DynamoDB e apenas recuperar os arquivos no S3.
 {{% /notice %}}
@@ -2046,7 +2046,7 @@ Uma questão comum quanto ao S3 é como melhorar o tempo de busca de arquivos, a
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [Macie](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#macie)
+ - O que é [Macie](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#macie)
 {{% /notice %}}
 
 ---
@@ -2056,7 +2056,7 @@ Uma questão comum quanto ao S3 é como melhorar o tempo de busca de arquivos, a
 {{% notice style="note" %}}
 > Contextualização:
 
- - O que é [SES](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ses)
+ - O que é [SES](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#ses)
 {{% /notice %}}
 
 ---

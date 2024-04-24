@@ -1,16 +1,16 @@
-baseURL = "https://docs.digital-garden.com.br"
+baseURL = "https://docs.uniiii.com.br"
 canonifyURLs = true
 relativeURLs = false
 uglyURLs = true  # true -> basic/index.html -> basic.html
 languageCode = 'pt-br'
-title = 'Digital Garden'
-themesDir = "themes"
+title = 'Uni Salva'
+theme = "relearn"
 
 # For search functionality
 [outputs]
-  home = ["HTML", "RSS"]
-  section = ["HTML", "RSS"]
-  page = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "PRINT", "SEARCH"]
+  section = ["HTML", "RSS", "PRINT"]
+  page = ["HTML", "RSS", "PRINT"]
 
 
 [params]
@@ -23,7 +23,7 @@ themesDir = "themes"
   # See the config.toml file from this documentation site to have an example.
   editURL = ""
   # Author of the site, will be used in meta information
-  author = "Mateus Macedo"
+  author = "Uniliva Alves Pereira"
   # Description of the site, will be used in meta information
   description = "Anotações da minha vida de programador."
   # Shows a checkmark for visited pages on the menu

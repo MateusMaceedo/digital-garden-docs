@@ -635,7 +635,7 @@ Forma de se usar o ADSF (active directory na **AWS**)
     - **Assimétricas** (RSA & ECC Key Pairs)
       - Tem duas chaves uma publica (encrypt) e outra Privada (decrypt).
       - A publica pode ser baixada, nas não se tem acesso a privada.
-      - Caso de usos. 
+      - Caso de usos.
         - Encriptar dados fora da AWS, onde não se pode chamar a API do KMS.
         - Realizar assinatura de objetos.
 - **Gerenciadas pela AWS - CMK**
@@ -1111,7 +1111,7 @@ Resource police restritas para a organização
     - 5 -> geração das maquinas.
     - 2xlarge -> Tamanho das instâncias
 
-    
+
 
 ---
 
@@ -1361,7 +1361,7 @@ Resource police restritas para a organização
   - Bom para diminuir a latência.
     ![lambda@edge](assets/image-20210903204606738.png)
 - CloudFront Functions
-  - Saiba mais em [Edge Funtions](https://docs.uniii.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#edge-function)
+  - Saiba mais em [Edge Funtions](https://docs.digital-garden.com.br/02-cloud-notes/01-aws/03-aws-cloud-architect-professional/02-conteudo.html#edge-function)
 
 ---
 
@@ -1648,7 +1648,7 @@ Resource police restritas para a organização
 ```shell
 # para verificar use o comando para verificar os valores retornado pelos dns
 nslookup <url>
-dig <url> 
+dig <url>
 ```
 
 
@@ -2458,11 +2458,11 @@ Serviço que melhora a disponibilidade de um serviço usando os ponto de presen�
   - Caso provisionado é preciso definir a:
     - Unidade de capacidade de leitura (**RCU** - Read Capacity Units), sendo cobrado ($0.00013) por RCU.
       - 1 RCU - 1 leitura consistente (**strong**) lendo até 4KB por segundo.
-      - 1 RCU - 2 Leitura Eventual (eventually) lendo até 4KB por segundo.      
+      - 1 RCU - 2 Leitura Eventual (eventually) lendo até 4KB por segundo.
       ![image-20230814194037758](assets/image-20230814194037758.png)
     - Unidade de capacidade de escrita (**WCU** - Write Capacity Units), sendo cobrado ($0.00065) por WCU.
-      - 1 WCU - 1 escrita de até 1KB      
-      ![image-20230814194136079](assets/image-20230814194136079.png)    
+      - 1 WCU - 1 escrita de até 1KB
+      ![image-20230814194136079](assets/image-20230814194136079.png)
   - on-demand
     - Read Request Units (RRU) -> igual ao RCU.
     - Write Request Units (WRU) -> igual ao WCU.
@@ -2481,7 +2481,7 @@ Serviço que melhora a disponibilidade de um serviço usando os ponto de presen�
     - Pode se definir os WCU e RCU proprios. Por default copia o que esta na tabela.
 - TTL
   - Permite definir um periodo para deletar os itens.
-  - Não consome nenhum WCU. (Não tem custo). 
+  - Não consome nenhum WCU. (Não tem custo).
   - Tem o formato **unix epoch timestamp**
 - Soluções com o DynamoDB
   - Indexador de objetos
@@ -2504,7 +2504,7 @@ Serviço que melhora a disponibilidade de um serviço usando os ponto de presen�
 - Solução de arquitetura com OpenSearch.
   - Buscador usando DynamoDB
     ![image-20230220110750178](assets/image-20230220110750178.png)
-  - Dados vindo do kinesis  
+  - Dados vindo do kinesis
   ![image-20230820102813438](assets/image-20230820102813438.png)
 
 ---
@@ -3177,7 +3177,7 @@ Quando se cria um banco no RDS se passa quando ele deve ter, com essa funcionali
 - Os Dashboards são **globais**.
 - Neles é possível incluir gráficos de diferentes **contas AWS e regiões.**
 - É possível compartilhar um Dashboard com um terceiro via **cognito**.
-- até 3 Dashboards são de graça, e demais se paga $3 dólares por mês por Dashboard.  
+- até 3 Dashboards são de graça, e demais se paga $3 dólares por mês por Dashboard.
 
 ### Synthetics Canary
   - Robo que fica verificando a saúde de API e caso encontre problema pode ajustar o ALB ou DNS para redirecionar o tráfego.
@@ -3873,7 +3873,7 @@ Permite criar eventos, ous seja ações predefinidas ou agendadas que podem disp
 > - 22 -> SFTP
 > - 80 -> HTTP — access unsecured websites
 > - 443 -> HTTPS — access secured websites
-> - 3389 ->  RDP (Remote Desktop Protocol for Windows instance) 
+> - 3389 ->  RDP (Remote Desktop Protocol for Windows instance)
 
 
 

@@ -1,4 +1,4 @@
-baseURL = "https://docs.uniiii.com.br"
+baseURL = "https://docs.digital.garden.com.br"
 canonifyURLs = true
 relativeURLs = false
 uglyURLs = true  # true -> basic/index.html -> basic.html

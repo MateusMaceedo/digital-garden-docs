@@ -4,7 +4,7 @@ relativeURLs = false
 uglyURLs = true  # true -> basic/index.html -> basic.html
 languageCode = 'pt-br'
 title = 'Digital Garden'
-theme = "relearn"
+theme = "meghna-hugo"
 
 # For search functionality
 [outputs]

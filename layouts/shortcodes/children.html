@@ -1,0 +1,6 @@
+<!-- children.html -->
+<ul>
+  {{ range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>

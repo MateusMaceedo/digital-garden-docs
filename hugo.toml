@@ -3,7 +3,7 @@ canonifyURLs = true
 relativeURLs = false
 uglyURLs = true  # true -> basic/index.html -> basic.html
 languageCode = 'pt-br'
-title = 'Uni Salva'
+title = 'Digital Garden'
 theme = "relearn"
 
 # For search functionality

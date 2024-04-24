@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sistema-noticias-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sistema-noticias
+  template:
+    metadata:
+      labels:
+        app: sistema-noticias
+    spec:
+      containers:
+      - name: sistema-noticias-container
+        image: aluracursos/sistema-noticias:1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        envFrom:
+          - configMapRef:
+              name: sistema-configmap
+        livenessProbe:
+          httpGet:  # metodo que vamos usar
+            path: /  # path aonde vamos bater com a requisição
+            port: 80 # porta do container
+          periodSeconds: 10 # de quanto em quanto tempo vamos validar em segundos
+          failureThreshold: 3 # quandos erros vamos aceitar antes de reiniciar o container
+          initialDelaySeconds: 20 # Delay inicial para que o container possa subir
+        readinessProbe:
+          httpGet:  # metodo que vamos usar para validar se o caontainer esta pronto
+            path: /  # path aonde vamos bater com a requisição
+            port: 80 # porta do container
+          periodSeconds: 10 # de quanto em quanto tempo vamos validar em segundos
+          failureThreshold: 5 # quanto erros são tentativas são toleraveis aonte de começar a madar requisição para o container
+          initialDelaySeconds: 3 # Delay inicial após o container subir, para iniciar as validações se o container esta pronto

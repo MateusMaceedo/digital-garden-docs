@@ -1,0 +1,60 @@
+          <style>
+            #logo svg,
+            #logo svg * {
+              color: #bb2f2f;
+              color: var(--MENU-SECTIONS-BG-color);
+              fill: #282828 !important;
+              fill: var(--MENU-SECTIONS-BG-color) !important;
+              opacity: .945;
+            }
+            a#logo {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 1.875rem;
+              font-weight: 300;
+              margin-top: -.8125rem;
+              max-width: 60%;
+              text-transform: uppercase;
+              width: 14.125rem;
+              white-space: nowrap;
+            }
+            a#logo:hover {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+            }
+            #logo svg {
+              margin-bottom: -1.25rem;
+              margin-inline-start: -1.47rem;
+              width: 40.5%;
+            }
+            @media only all and (max-width: 60rem) {
+              a#logo {
+                font-size: 1.5625rem;
+                margin-top: -.1875rem;
+              }
+              #logo svg {
+                margin-bottom: -.75rem;
+                margin-inline-start: -1.47rem;
+              }
+            }
+            @media all and (-ms-high-contrast:none) {
+              {{ "/* IE11s understanding of positioning is weird at best */" | safeCSS }}
+              a#logo {
+                margin-top: -3.625rem;
+              }
+              #logo svg {
+                margin-bottom: -3.875rem;
+                margin-left: -1.47rem;
+              }
+            }
+            @media only all and (-ms-high-contrast:none) and (max-width: 60rem) {
+              #logo svg {
+                margin-left: -1.47rem;
+              }
+            }
+          </style>
+          <a id="logo" href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" .Site.Home) }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Unicorn"><symbol id="New_Symbol_14" viewBox="-6.5 -6.5 13 13"><path fill="#fff0c3" stroke="#465049" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 0 -6 c 2.2 0 4.1 1.5 4.7 3.5 C 6.3 -2.5 6.4 0 5 0 v 1 c 0 2.8 -2.2 5 -5 5 s -5 -2.2 -5 -5 V 0 c -1.4 0 -1.3 -2.5 0.2 -2.5 C -4.1 -4.5 -2.2 -6 0 -6 z" class="colorffd4c3 svgShape colorStroke504b46 svgStroke"></path><circle cx="-1.6" cy="-.1" r=".1" fill="#fbbc05" class="colorffc258 svgShape"></circle><path fill="#34a853" d="M -1.6 0.5 c -0.3 0 -0.6 -0.3 -0.6 -0.6 s 0.2 -0.7 0.6 -0.7 c 0.3 0 0.6 0.3 0.6 0.7 s -0.3 0.6 -0.6 0.6 z" class="color4f4b45 svgShape"></path><circle cx="1.6" cy="-.1" r=".1" fill="#fbbc05" class="colorffc258 svgShape"></circle><path fill="#34a853" d="M 1.6 0.5 C 1.3 0.5 1 0.2 1 -0.1 s 0.3 -0.6 0.6 -0.6 s 0.6 0.3 0.6 0.6 s -0.2 0.6 -0.6 0.6 z" class="color4f4b45 svgShape"></path><circle cx="-3" cy="-1.5" r=".5" fill="#fae4a5" class="colorfabfa5 svgShape"></circle><circle cx="3" cy="-1.5" r=".5" fill="#fae4a5" class="colorfabfa5 svgShape"></circle><path fill="none" stroke="#465049" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M -1.2 -3 c 0.8 -0.5 1.7 -0.5 2.5 0" class="colorStroke504b46 svgStroke"></path></symbol><g id="Icons" fill="#000000" class="color000000 svgShape"><g id="XMLID_1870_" fill="#000000" class="color000000 svgShape"><path id="XMLID_3014_" fill="#fff3cf" d="M 9.7 17.3 L 4 11.1 c -0.2 -0.3 -0.3 -0.6 -0.1 -1 c 0.2 -0.4 0.6 -0.6 1.1 -0.4 l 8.6 3.1 l -3.9 4.5 z" class="colorfffacf svgShape"></path><path id="XMLID_3013_" fill="#e5efff" d="M 4.3 11.4 c 0.2 -0.1 0.4 -0.1 0.7 -0.1 l 7.6 2.7 l 1.1 -1.2 l -8.8 -3.1 c -0.4 -0.1 -0.9 0 -1.1 0.4 c -0.2 0.3 -0.1 0.7 0.1 1 l 0.4 0.3 z" class="colorfffce5 svgShape"></path><path id="XMLID_3012_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 9.7 17.3 L 4 11.1 c -0.2 -0.3 -0.3 -0.6 -0.1 -1 c 0.2 -0.4 0.6 -0.6 1.1 -0.4 l 8.6 3.1 l -3.9 4.5 z" class="colorStroke45413c svgStroke"></path><path id="XMLID_3051_" fill="#ccdfff" d="M 18.4 9.2 l 25.4 15 c 0.2 -1.4 0.3 -2.8 0.3 -4.3 c 0 -0.8 0 -1.5 -0.1 -2.3 c -0.1 -1.6 -1.3 -3 -2.9 -3.3 c -0.2 0 -0.4 -0.1 -0.5 -0.1 c -0.2 -0.4 -0.4 -0.8 -0.6 -1.1 c -1.5 -2.3 -3.6 -3 -5.4 -3.1 c -0.3 -0.5 -0.6 -1 -1 -1.5 c -1.6 -1.9 -3.5 -2.4 -5.3 -2.4 l -0.3 -0.3 c -1.9 -1.9 -4.1 -2.2 -5.9 -1.9 c -2.1 -1.4 -5.2 -1.9 -8.2 -0.5 c -5.8 2.6 -4 10.8 0.9 10.5 c 2.8 -0.2 4.9 -3.2 3.6 -4.7 z" class="colorffccdd svgShape"></path><path id="XMLID_3064_" fill="#e5efff" d="M 22.1 6.8 c 1.8 -0.3 4 0 5.9 1.9 l 0.3 0.3 c 1.7 0 3.7 0.5 5.3 2.4 c 0.5 0.5 0.8 1.1 1 1.5 c 1.9 0.1 3.9 0.8 5.4 3.1 c 0.3 0.4 0.5 0.8 0.6 1.1 c 1.2 0.2 2.4 0.6 3.4 1.5 c 0 -0.3 0 -0.6 -0.1 -0.9 c -0.1 -1.8 -1.4 -3.2 -3.2 -3.5 h -0.2 c -0.2 -0.4 -0.4 -0.8 -0.6 -1.1 c -1.5 -2.3 -3.6 -3 -5.4 -3.1 c -0.3 -0.5 -0.6 -1 -1 -1.5 c -1.6 -1.9 -3.5 -2.4 -5.3 -2.4 c 0 -0.1 -0.1 -0.2 -0.2 -0.3 c -1.9 -1.9 -4.1 -2.2 -5.9 -1.9 c -2.1 -1.4 -5.2 -1.9 -8.2 -0.5 c -3.1 1.4 -4 4.5 -3.4 6.9 c 0.4 -1.6 1.5 -3.1 3.4 -4 c 3 -1.4 6.1 -0.9 8.2 0.5 z" class="colorffe5ee svgShape"></path><path id="XMLID_3088_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 18.4 9.2 l 25.4 15 c 0.2 -1.4 0.3 -2.8 0.3 -4.3 c 0 -0.8 0 -1.5 -0.1 -2.3 c -0.1 -1.6 -1.3 -3 -2.9 -3.3 c -0.2 0 -0.4 -0.1 -0.5 -0.1 c -0.2 -0.4 -0.4 -0.8 -0.6 -1.1 c -1.5 -2.3 -3.6 -3 -5.4 -3.1 c -0.3 -0.5 -0.6 -1 -1 -1.5 c -1.6 -1.9 -3.5 -2.4 -5.3 -2.4 l -0.3 -0.3 c -1.9 -1.9 -4.1 -2.2 -5.9 -1.9 c -2.1 -1.4 -5.2 -1.9 -8.2 -0.5 c -5.8 2.6 -4 10.8 0.9 10.5 c 2.8 -0.2 4.9 -3.2 3.6 -4.7 z" class="colorStroke45413c svgStroke"></path><path id="XMLID_2347_" fill="#4285f4" d="M 17.2 31.1 l 2.7 -3 l 2.4 -0.3 c 0.8 4.6 2.5 8.9 5 12.7 c 1.3 2 4.1 2.4 6 1 c 5.5 -4.1 9.5 -10.3 10.5 -17.5 L 30.4 13.5 c -1.4 -1.1 -2.9 -2.1 -4.5 -2.9 c -2.1 -1.1 -4.4 -1.7 -6.7 -1.5 c -4.2 0.4 -7.8 3.2 -9.3 6.9 L 5.7 26.3 c -0.6 1.4 -0.5 2.9 0.1 4.3 v 0.1 c 0.9 2 2.9 3.3 5.1 3.3 h 0.1 c 2.4 -0.1 4.7 -1.1 6.2 -2.9 z" class="colore5f8ff svgShape"></path><path id="XMLID_2359_" fill="#ffffff" d="M 25.3 14.9 c 1.8 0.9 3.5 2 5.1 3.2 L 43 28 c 0.4 -1.3 0.7 -2.6 0.9 -3.9 L 30.4 13.5 c -1.6 -1.3 -3.3 -2.3 -5.1 -3.2 c -3.2 -1.6 -7 -1.6 -10.2 0.1 c -2.4 1.2 -4.2 3.3 -5.2 5.7 L 5.7 26.3 c -0.6 1.4 -0.5 2.9 0.1 4.3 v 0.1 l 4.1 -10 c 1 -2.5 2.9 -4.5 5.2 -5.7 c 3.2 -1.7 7 -1.7 10.2 -0.1 z" class="colorffffff svgShape"></path><ellipse id="XMLID_426_" cx="24.9" cy="44" fill="#3c453e" opacity=".15" rx="11.5" ry="1.5" class="color45413c svgShape"></ellipse><path id="XMLID_3017_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 30.8 10.6 c -0.7 -2 -1.6 -3.5 -2.5 -4.5" class="colorStroke45413c svgStroke"></path><path id="XMLID_3016_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 36 13.4 c -0.4 -1.3 -0.8 -2.4 -1.3 -3.3" class="colorStroke45413c svgStroke"></path><path id="XMLID_3015_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 41.7 17.8 c -0.2 -1.4 -0.6 -2.6 -1 -3.5" class="colorStroke45413c svgStroke"></path><circle id="XMLID_3008_" cx="17.2" cy="18.2" r=".9" fill="#3c453e" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" class="color45413c svgShape colorStroke45413c svgStroke"></circle><ellipse id="XMLID_3007_" cx="22.3" cy="21.8" fill="#ea4335" rx="1.5" ry="1" class="colorffb0ca svgShape"></ellipse><path id="XMLID_3006_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 8.4 30 s -0.4 -1.1 0.6 -1.5" class="colorStroke45413c svgStroke"></path><path id="XMLID_3002_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 22.3 27.9 c 1.5 -0.2 2.9 -0.9 3.9 -2.1 c 1 -1.2 1.5 -2.7 1.4 -4.2 l -0.1 -1.8" class="colorStroke45413c svgStroke"></path><path id="XMLID_2358_" fill="none" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 17.2 31.1 l 2.7 -3 l 2.4 -0.3 c 0.8 4.6 2.5 8.9 5 12.7 c 1.3 2 4.1 2.4 6 1 c 5.5 -4.1 9.5 -10.3 10.5 -17.5 L 30.4 13.5 c -1.4 -1.1 -2.9 -2.1 -4.5 -2.9 c -2.1 -1.1 -4.4 -1.7 -6.7 -1.5 c -4.2 0.4 -7.8 3.2 -9.3 6.9 L 5.7 26.3 c -0.6 1.4 -0.5 2.9 0.1 4.3 v 0.1 c 0.9 2 2.9 3.3 5.1 3.3 h 0.1 c 2.4 -0.1 4.7 -1.1 6.2 -2.9 z" class="colorStroke45413c svgStroke"></path><path id="XMLID_3005_" fill="#ccdfff" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 10.5 10.4 c 0.5 2 2.1 3.6 4.3 3.5 c 3.2 -0.2 4.2 -4.3 2.1 -5.6 c -1.9 -1.1 -3.8 0.7 -2.7 1.5" class="colorffccdd svgShape colorStroke45413c svgStroke"></path><path id="XMLID_3004_" fill="#ffffff" stroke="#3c453e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 22.3 11.6 c 1.2 -1.4 1.2 -3.4 -0.2 -4.7 L 21 5.8 c -0.4 -0.4 -1.2 -0.4 -1.6 -0.1 c -0.2 0.2 -0.3 0.4 -0.3 0.7 l 0.6 5.2" class="colorffffff svgShape colorStroke45413c svgStroke"></path></g></g></svg>
+          Uni Salva
+          </a>

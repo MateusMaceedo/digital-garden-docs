@@ -5,7 +5,6 @@ uglyURLs = true  # true -> basic/index.html -> basic.html
 languageCode = 'pt-br'
 title = 'Uni Salva'
 theme = "relearn"
-themesDir = "themes"
 
 # For search functionality
 [outputs]

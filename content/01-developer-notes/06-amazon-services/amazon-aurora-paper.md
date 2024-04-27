@@ -4,9 +4,9 @@ weight: 2
 ---
 
 
-# Design Considerations for High Throughput Cloud-Native Relational Databases
+### **Design Considerations for High Throughput Cloud-Native Relational Databases**
 
-# Introdução
+### **Introdução**
 
 Amazon Aurora é um banco de dados relacional criado para OLTP oferecido como parte do ecossistema da AWS. Nos sistemas em nuvem modernos, escalabilidade e resiliência é mais facilmente atingido quando separamos computação de armazenamento e replicação de armazenamento entre múltiplos nodes. Essa arquitetura permite facilmente substituir um node com problemas por uma outra réplica sem precisa se preocupar com a escritura e processamento.
 

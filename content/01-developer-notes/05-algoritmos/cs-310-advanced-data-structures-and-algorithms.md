@@ -26,14 +26,14 @@ weight: 2
 - Quanto mais nodes, maior a chance de falhas. Para resolver esse problema precisamos replicar a informação.
 - É criado um *overlap* nos hashs ranges dos nodes.
 
-    ![replicação](/assets/cs-310-advanced-data-structures-and-algorithms/range-replication.png)
+    ![replicação](../assets/cs-310-advanced-data-structures-and-algorithms/range-replication.png)
 
 
 ### **Consistência**
 
 - O problema quando os dados são replicados é que quando acontece uma escritura o dado precisa ser replicado para todos os nodes, e isso pode causar uma inconsistência caso aconteça uma leitura no meio tempo da atualização de todas as réplicas.
 
-    ![consistency](/assets/cs-310-advanced-data-structures-and-algorithms/consistency.png)
+    ![consistency](../assets/cs-310-advanced-data-structures-and-algorithms/consistency.png)
 
 
 ### **CAP Theorem**
@@ -102,7 +102,7 @@ O conteúdo de algumas partições podem ser excluídas ou sofrerem algum delay.
 - Normalmente, haverá uma quantidade N de nodes para uma quantidade X de réplicas.
 - No cenário real, pode haver 10 nodes para uma 3 de réplicas.
 
-![cluster](/assets/cs-310-advanced-data-structures-and-algorithms/cluster-scaling.png)
+![cluster](../assets/cs-310-advanced-data-structures-and-algorithms/cluster-scaling.png)
 
 # Referências
 

@@ -4,7 +4,7 @@ title: "Bem vindo"
 ---
 
 ---
-Bem vindo a minha pagina de anotações, aqui com minhas unilises (erros de português) deixo minhas observações sobre os temas que estudo.
+Bem vindo a minha pagina de anotações, aqui concentram-se, sobretudo, os elos e sumários de livros, cursos, postagens e palestras que absorvo diarimente.
 
 ---
 > {{% icon icon="swatchbook" %}} Paginas:

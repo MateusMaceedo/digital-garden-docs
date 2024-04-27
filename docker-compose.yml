@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  hugo:
+    image: jojomi/hugo:latest
+    volumes:
+      - ./digita-garden-docs:/src
+    ports:
+      - "1313:1313"
+    command: hugo server -D --bind=0.0.0.0

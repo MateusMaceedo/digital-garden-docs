@@ -1,6 +1,6 @@
 
 ---
-title: "Develop Associate"
+title: "AWS Certification Develop Associate"
 weight: 4
 
 ---

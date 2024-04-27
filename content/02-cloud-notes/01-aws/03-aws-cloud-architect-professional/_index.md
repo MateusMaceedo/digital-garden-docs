@@ -1,5 +1,5 @@
 ---
-title: "Architect Professional"
+title: "AWS Certification Architect Professional"
 weight: 3
 ---
 

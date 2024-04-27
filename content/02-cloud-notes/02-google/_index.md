@@ -1,5 +1,5 @@
 ---
-title: "Amazon Cloud"
+title: "Google Cloud"
 weight: 1
 ---
 ---

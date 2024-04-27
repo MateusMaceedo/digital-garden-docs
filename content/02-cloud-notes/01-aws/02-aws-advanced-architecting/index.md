@@ -1,7 +1,7 @@
 
 ---
 
-title: "Advanced Architecting on AWS"
+title: "AWS Certification Advanced Architecting on AWS"
 weight: 4
 
 ---
@@ -34,7 +34,7 @@ ec2 - nitro, usado quando se quer não virtualizar certo componentes, tipo a pla
   - Usa se SCP, para aplicar regras comuns as contas de uma organização.
     - Pode ser aplicada a **OU**, **a conta aws** ou **a conta root**
     - Caso a politica seja aplicado a nivel de root, e ela não sera aplicado a conta de gerenciamento, a conta onde fica o cartão de credito, conta de cobrança.
-- SSO 
+- SSO
   - Forma de acessar ambiente multi account, de forma simples e unificada.
   - Ponto e entrada unico.
   - Pode-se usar um provider identity externo, para realizar a autenticação
@@ -45,14 +45,14 @@ ec2 - nitro, usado quando se quer não virtualizar certo componentes, tipo a pla
   - Usa o oraganizations e o  cloudFormation e o Service catalog para criar novas contas.
   - Usa GardRails que podem ser:
     - Mandatorias, opcionais e fortimentes recomendados.
-    - 
+    -
 
 ---
 
 
 ## 3 - Hybrid connectivityAccounts
 
-- VPN 
+- VPN
   - site-to- site vpn - liga-se direto no datacenter onprimese
     - Pra configurar é disponibilido dois tunel de vpn, cada um com 1.25 mbs.
     - virtual private gataway - ponta do tunel vpn do lado da aws
@@ -151,7 +151,7 @@ cd ~
  ping 10.3.3.78
  ping 10.4.4.125
 ping 10.0.8.13
-tgw-0e2ee82c8f1d39125 
+tgw-0e2ee82c8f1d39125
 tgw-07b424246b676ba8b
 
 ---
@@ -252,7 +252,7 @@ AWS Firewal manager
 
 - Serviço gerenciado de firewall de rede para o nivel de VPC
 
-## 
+##
 
 
 ## 9 - Securing DataAccounts
@@ -260,7 +260,7 @@ AWS Firewal manager
 - AWS KMS
   - envelopamento (data key e master key)
   - usa se a data key pra criptografar dados tipo arquivos no S#
-  - Usa se a master key para criptografar a data key 
+  - Usa se a master key para criptografar a data key
   - Ver criptografia S3
     - SSE-S3 - Usa chave do S3 gerenciada pela aws.
     - ![image-20211015103426848](assets/image-20211015103426848.png)
@@ -289,7 +289,7 @@ AWS Firewal manager
 
 ### S3 Data management
 
-- S3 tem 
+- S3 tem
   - 4 noves de disponibilidade -> que por ano pode gerar uma indisponibiliade de 52.6 minutos (isso é seria no maximo).
   - 11 noves de durabilidade.
 ![image-20211015112244613](assets/image-20211015112244613.png)
@@ -324,4 +324,3 @@ AWS Cloud9
 
 
 ## 13 - Architecting for the EDGEAccounts
-

@@ -1,5 +1,5 @@
 ---
-title: "AWS Certification Cloud Practitioner"
+title: "AWS Certification Cloud DevOps Professional"
 weight: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Amazon Cloud"
+title: "Azure Cloud"
 weight: 1
 ---
 ---

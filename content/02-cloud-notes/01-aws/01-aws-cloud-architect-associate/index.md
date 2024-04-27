@@ -1,5 +1,5 @@
 ---
-title: "Architect Associate"
+title: "AWS Certification Architect Associate"
 weight: 2
 ---
 

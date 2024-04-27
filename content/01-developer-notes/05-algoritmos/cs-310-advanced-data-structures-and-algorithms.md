@@ -1,4 +1,7 @@
-# CS-310 - Advanced Data Structures and Algorithms
+---
+title: "CS-310 - Advanced Data Structures and Algorithms"
+weight: 2
+---
 
 
 # **Lecture 14 - Distributed DB Consistency**
@@ -22,16 +25,16 @@
 
 - Quanto mais nodes, maior a chance de falhas. Para resolver esse problema precisamos replicar a informação.
 - É criado um *overlap* nos hashs ranges dos nodes.
-    
+
     ![replicação](/assets/cs-310-advanced-data-structures-and-algorithms/range-replication.png)
-    
+
 
 ### **Consistência**
 
 - O problema quando os dados são replicados é que quando acontece uma escritura o dado precisa ser replicado para todos os nodes, e isso pode causar uma inconsistência caso aconteça uma leitura no meio tempo da atualização de todas as réplicas.
-    
+
     ![consistency](/assets/cs-310-advanced-data-structures-and-algorithms/consistency.png)
-    
+
 
 ### **CAP Theorem**
 

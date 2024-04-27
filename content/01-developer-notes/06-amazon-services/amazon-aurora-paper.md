@@ -1,10 +1,10 @@
 ---
-title: "Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases"
+title: "Amazon Aurora"
 weight: 2
 ---
 
 
-# Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases
+# Design Considerations for High Throughput Cloud-Native Relational Databases
 
 # Introdução
 

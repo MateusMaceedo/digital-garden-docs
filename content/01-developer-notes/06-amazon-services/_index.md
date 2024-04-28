@@ -6,10 +6,6 @@ weight: 1
 
 ---
 
-{{% notice style="warning" %}}
-Em construção
-{{% /notice %}}
+![img](../assets/amazon-services-designer/how-to-work-aws-ptbr.png)
 
 ---
-> {{% icon icon="swatchbook" %}} Paginas:
-> {{% children sort="weight" %}}

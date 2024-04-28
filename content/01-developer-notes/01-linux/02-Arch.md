@@ -43,8 +43,8 @@ wifi-menu
 
 ```shell
 # Para listar as partições existentes
- lsblk 
-fdisk -l 
+ lsblk
+fdisk -l
 
 # Para cira novas partições GPT, para a partição /dev/sda
 cfdisk /dev/sda
@@ -58,7 +58,7 @@ cfdisk /dev/sda
 
 - exemplo
 
-![](assets/2023-01-08-12-38-17-image.png)
+![](../assets/2023-01-08-12-38-17-image.png)
 
 ### Formatando o disco
 
@@ -80,7 +80,7 @@ mkswap /dev/sda2
 
 ```shell
 # mkfs.ext4 /dev/root_partition
-mkfs.ext4 
+mkfs.ext4
 mount /dev/sda3 /mnt
 ```
 
@@ -325,7 +325,7 @@ pacman -S virtualbox-guest-utils virtualbox-guest-modules-arch mesa mesa-libgl
 
 ```shell
 pacman -S gnome gnome-terminal nautilus gnome-tweaks gnome-control-center gnome-backgrounds adwaita-icon-theme
-pacman -S firefox 
+pacman -S firefox
 systemctl enable gdm
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "ECS Terraform"
+title: "ECS"
 weight: 1
 ---
 

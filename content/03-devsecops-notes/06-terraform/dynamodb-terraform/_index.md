@@ -1,5 +1,5 @@
 ---
-title: "DynamoDB Terrafom"
+title: "DynamoDB"
 weight: 1
 ---
 

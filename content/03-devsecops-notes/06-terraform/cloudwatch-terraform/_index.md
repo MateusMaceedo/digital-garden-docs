@@ -1,5 +1,5 @@
 ---
-title: "Cloudwatch Terraform"
+title: "Cloudwatch"
 weight: 1
 ---
 

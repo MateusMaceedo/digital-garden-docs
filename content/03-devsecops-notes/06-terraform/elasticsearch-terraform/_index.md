@@ -1,5 +1,5 @@
 ---
-title: "Elastic Search Terraform"
+title: "Elastic Search"
 weight: 1
 ---
 

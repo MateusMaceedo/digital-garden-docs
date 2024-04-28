@@ -1,5 +1,5 @@
 ---
-title: "Elastic Cache Terraform"
+title: "Elastic Cache"
 weight: 1
 ---
 

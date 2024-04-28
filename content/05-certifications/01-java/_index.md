@@ -1,5 +1,5 @@
 ---
-title: "Java certifications"
+title: "Java Certifications"
 weight: 1
 ---
 

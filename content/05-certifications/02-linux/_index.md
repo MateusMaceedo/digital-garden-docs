@@ -1,5 +1,5 @@
 ---
-title: "Linux certifications"
+title: "Linux Certifications"
 weight: 1
 ---
 

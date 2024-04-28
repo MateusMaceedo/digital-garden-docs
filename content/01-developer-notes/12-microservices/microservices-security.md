@@ -30,7 +30,7 @@ Assim que o cliente obtém o certificado do servidor, uma série de instruções
 
 É improvável que o certificado do server seja assinado diretamente por uma Root CA que o cliente confia. Entretanto, o cliente pode confiar nos certificados emitidos por uma CA intermediária contanto que a cadeia de certificados eventualmente leve para uma Root CA e que esteja corretamente assinado de acordo com a chave pública.
 
-![](/assets/microservices-security/cadeia-de-autoridades.png)
+![](../assets/microservices-security/cadeia-de-autoridades.png)
 
 ## Entendendo melhor os certificados
 
@@ -84,7 +84,7 @@ Um dos maiores desafios da arquitetura de micro-serviços em produção é mante
 
 O API Gateway é o que chamamos de *edge security* (lida com o tráfego norte/sul), enquanto o Service Mesh lida com o tráfego leste/oeste.
 
-![](/assets/microservices-security/orientacao-de-trafego.webp)
+![](../assets/microservices-security/orientacao-de-trafego.webp)
 
 ## Segurança do trafego north/south com API Gateway
 
@@ -120,7 +120,7 @@ Para garantir que um certificado é realmente válido, é necessário que o mesm
 
 O TLS em si é uma via de mão única, ele ajuda o cliente a identificar o servidor o qual está chamando, mas não o contrário. Two-way TLS, ou Mutual TLS, preenche esse *gap* ajudando ao servidor identificar o cliente o qual o chama.
 
-![](/assets/microservices-security/mtls-example.png)
+![](../assets/microservices-security/mtls-example.png)
 
 ### Desafios ao gerenciar as keys no mTLS
 

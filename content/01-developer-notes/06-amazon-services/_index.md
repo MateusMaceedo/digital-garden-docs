@@ -5,7 +5,6 @@ weight: 1
 
 
 ---
-
-![img](../assets/amazon-services-designer/how-to-work-aws-ptbr.png)
+![](assets/how-to-work-aws-ptbr.png)
 
 ---

@@ -88,3 +88,40 @@ Do lado do kafka é possível utilizar dos parametros para suavizar o consumo. T
 -   **Pause & resume**: Esses métodos são úteis para pausar o consumo de determinadas partições sem precisar fazer a thread dormir.
 
 > Kafka supports dynamic controlling of consumption flows by using pause(Collection) and resume(Collection) to pause the consumption on the specified assigned partitions and resume the consumption on the specified paused partitions respectively in the future poll(long) calls.
+
+### Getting started with Apache Kafka
+
+"**Apache Kafka** is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications."
+
+https://kafka.apache.org/
+
+Why do we need Apache Kafka ?
+
+#### Events
+- Systems need to talk each other
+- Devices / IOT
+
+#### Historical data
+- Store all event data
+
+#### Core capabilities
+- High throughput. Low latency as 2ms.
+- Scalable
+- Permant storage
+- High availability
+
+#### Ecosystem
+- Built-in stream processing
+- Connect to almost anything
+- Client libraries
+- Opensource tools
+
+#### Companies using Kafka
+- Netflix
+- ***Linkedin*** (Created)
+- Uber
+- Twitter
+- Dropbox
+- Spotify
+- Paypal
+- Banks...

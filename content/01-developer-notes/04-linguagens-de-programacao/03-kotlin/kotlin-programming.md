@@ -3,8 +3,19 @@ title: "Kotlin Programming"
 weight: 2
 ---
 
+<!--suppress HtmlDeprecatedAttribute -->
+
+<header>
+<p align="center">
+        <img width="100" src="../../assets/kotlin-programming/kotlin-logo.svg" alt="Kotlin logo" />
+    </p>
+    <h3 align="center">Kotlin Programming</h3>
+</header>
+
 ****Estudos na Linguagem Kotlin****
 >Kotlin é uma linguagem que uso diariamente no dia a dia, por ser uma linguagem muito interessante, e que roda na JVM, ***assim como o Java e o Scala***, tenho mais facilidade em lidar com conceitos semelhantes. Decidi criar essa seção para o Kotlin, para aqui anotar o pontos chaves da linguagem, criando oportunidades para trabalhar com conceitos funcionais, mutaveis/imutaveis, coroutines e rotinas de background services no back-end, estarei aumentando o conteudo ao decorrer dos meus estudos.
+
+#### Lista de empresas que usam o Kotlin no Brasil, no Back-end.
 
 #### Índice
 

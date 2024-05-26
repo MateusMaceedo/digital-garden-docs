@@ -9,7 +9,7 @@ weight: 2
 <p align="center">
         <img width="100" src="../../assets/kotlin-programming/kotlin-logo.svg" alt="Kotlin logo" />
     </p>
-    <h3 align="center">Kotlin Programming</h3>
+    <h3 align="center"></h3>
 </header>
 
 ****Estudos na Linguagem Kotlin****

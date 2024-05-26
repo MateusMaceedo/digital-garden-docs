@@ -4,7 +4,10 @@ weight: 2
 ---
 
 <!--suppress HtmlDeprecatedAttribute -->
-<img width="100" src="../../assets/kotlin-programming/kotlin-logo.svg" alt="Kotlin logo" />
+
+<div style="text-align: center;">
+    <img width="100" src="../../assets/kotlin-programming/kotlin-logo.svg" alt="Kotlin logo" />
+</div>
 
 ****Estudos na Linguagem Kotlin****
 >Kotlin é uma linguagem que uso diariamente no dia a dia, por ser uma linguagem muito interessante, e que roda na JVM, ***assim como o Java e o Scala***, tenho mais facilidade em lidar com conceitos semelhantes. Decidi criar essa seção para o Kotlin, para aqui anotar o pontos chaves da linguagem, criando oportunidades para trabalhar com conceitos funcionais, mutaveis/imutaveis, coroutines e rotinas de background services no back-end, estarei aumentando o conteudo ao decorrer dos meus estudos.
@@ -45,3 +48,15 @@ weight: 2
 - 3.9. ***Funcões Infix***
 - 3.10. ***Funcções Sempre Retornam um Valor***
 - 3.11. ***Inline Funtion***
+
+****Listagem 4**** - Primeiro Programa em Kotlin
+
+```PrimeiroPrograma.kt
+package fundamentos
+
+fun main(args: Array<String>) {
+  println("Primeiro")
+  println(" programa!")
+}
+
+```

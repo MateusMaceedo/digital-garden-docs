@@ -12,6 +12,8 @@ Os padrões de design podem acelerar o processo de desenvolvimento, fornecendo p
 
 A reutilização de padrões de design ajuda a evitar questões sutis que causam problemas graves e também melhora a legibilidade do código para programadores e arquitetos familiarizados com os padrões.
 
+Antes de mergulhar no material, você deve estar familiarizado com vários [Princípios de Design de Software](https://java-design-patterns.com/principles/#liskov-substitution-principle)
+
 ---
 > {{% icon icon="swatchbook" %}} Paginas:
 > {{% children sort="weight" %}}

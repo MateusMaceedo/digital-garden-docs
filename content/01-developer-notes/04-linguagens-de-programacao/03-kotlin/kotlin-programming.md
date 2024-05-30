@@ -4,6 +4,7 @@ weight: 2
 ---
 
 <!--suppress HtmlDeprecatedAttribute -->
+<img width="100" src="../../assets/kotlin-programming/kotlin-logo.svg" alt="Kotlin logo" />
 
 <div style="text-align: center;">
     <img width="100" src="../../assets/kotlin-programming/kotlin-logo.svg" alt="Kotlin logo" />

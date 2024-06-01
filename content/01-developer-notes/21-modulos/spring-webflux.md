@@ -13,7 +13,7 @@ Dependencias da necessarias, são:
 - spring-boot-starter-webflux
 - blockhound
 
-```gradle
+```.gradle.kts
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -23,19 +23,19 @@ plugins {
     kotlin("plugin.spring") version "1.6.0"
 }
 
-group = "br.com.mateus"
+group = "br.com.cardoso"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-webflux") {
+    implementation("org.springframework.boot:spring-boot-starter-webflux"){
         exclude(module = "spring-boot-starter-logging")
     }
-    implementation("org.springframework.boot:spring-boot-starter-log4j2")
+    implementation ("org.springframework.boot:spring-boot-starter-log4j2")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -60,7 +60,19 @@ tasks.withType<Test> {
 }
 ```
 
-#### Referencias
+##### Execução
+
+- Get: `curl localhost:8080/test/send`
+- Post: `curl --location --request POST 'localhost:8080/test/send/post' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{
+          "teste": "valor_teste"
+        }
+        '`
+- Com block: `curl localhost:8080/test/send/block`
+
+
+##### Referencias
 https://medium.com/@michellibrito/spring-webflux-f611c8256c53
 
 O Spring Webflux não veio para substituir o Spring MVC. São maneiras diferentes de se construir aplicações web e cada uma tem seu propósito. Por isso, ao escolher entre uma ou outra, é preciso conhecer e definir o objetivo e necessidades da aplicação, para que assim, o melhor módulo seja utilizado.

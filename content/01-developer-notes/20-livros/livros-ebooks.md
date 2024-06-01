@@ -60,5 +60,12 @@ Os tópicos abordados incluem:
 
 ##### Sobre o Autor
 
-
 **Martin Fowler** é um consultor independente que aplica objetos a problemas empresariais prementes há mais de uma década. Ele prestou consultoria sobre sistemas em áreas como saúde, negociação financeira e finanças corporativas. Seus clientes incluem Chrysler, Citibank, Serviço Nacional de Saúde do Reino Unido, Andersen Consulting e Netscape Communications. Além disso, Fowler é palestrante regular sobre objetos, Linguagem de Modelagem Unificada e padrões.
+
+#### 7. Padrões de Projetos
+
+![Consumers vs Partitions](../assets/livros-ebooks/padroes-de-projetos.jpeg)
+
+##### Descrisão do livro
+
+##### Sobre o Autor

@@ -9,7 +9,10 @@ Como habilitar o fluxo de mudança para uma tabela DynamoDB? Qual é a composiç
 
 ***Caso de uso***: Muitas das vezes criamos microserviços para realizar as operações no DynamoDB, com isso provisionamos uma infra, criada dentro de um cluster, temos CPU e memoria, e recursos de Scaling para se preocupar, dado que precisamos conhecer as tabelas e os campos que ali estão, também realizamos os parse de cada campo da tabela, criando entidade na arquitetura da aplicação, e usamos o SDK do serviço para se comunicar com o mesmo dentro da AWS, porque não utilizar o DynamoDB Stream para realizar tudo isso ?
 
-O DynamoDB fornece duas abordagens de Change Data Capture (CDC) para capturar alterações de uma tabela. Aqui darei exemplos com os **Stream do DynamoDB** como um mecanismo confiável de CDC, como ele funciona e de que maneiras podemos consumir eventos de mudança dele.
+O DynamoDB fornece duas abordagens de Change Data Capture (CDC) para capturar alterações de uma tabela. Aqui darei exemplos com os **Stream do DynamoDB** como um mecanismo confiável de CDC, como ele funciona e de que maneiras podemos consumir eventos de mudança dele. Um ponto importante é que ao habilitar o DynamoDB Stream na tabela, ***você poderá acessar as informações de alteração por meio da API Streams do DynamoDB.***
+
+Opções de Stream do DynamoDB:
+![Streams do DynamoDB!](../assets/amazon-services-designer/Tipos%20de%20Stream%20do%20DynamoDB.drawio.png)
 
 #### O problema
 Imagine que seu aplicativo inseri uma entrada (um objeto de usuário) em uma tabela DynamoDB. Um função Lambda está interessada em processar esse registro para enviar um e-mail de boas-vindas ao novo usuário.

@@ -24,9 +24,9 @@ Aqui estão os livros que me influenciaram e influencia até os dias de hoje, pa
 - **Spring Cloud**
 - **Python**
 
->Ser sênior é medido por duas coisas, sua **experiência** e suas **habilidades tecnicas**.
+>Fixado: Ser sênior é medido por duas coisas, sua **experiência** e suas **habilidades tecnicas**.
 
-#### Minha Biblioteca Virtual - (Se trata de uma lista incremental, ao longo do anos acrescento mais livros de acordo com o que estou trabalhando)
+>Minha Biblioteca Virtual - (Se trata de uma lista incremental, ao longo do anos acrescento mais livros de acordo com o que estou trabalhando)
 
 #### 1. The staff engineers path
 

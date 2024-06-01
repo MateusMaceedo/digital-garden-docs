@@ -3,11 +3,34 @@ title: "Livros e E-books"
 weight: 2
 ---
 
-#### Livros para tech leads
+Aqui estão os livros que me influenciaram e influencia até os dias de hoje, para construção de software, seguindo boas praticas, tendo como principio ter os meus conhecimentos atuais mais fixados, eu costumo ler bastante sobre uma determinada tecnologia e elencar em projetos reais, para colocar em pratica aquilo que estudo. Para não cair na rotina, leio diariamente varios assuntos ligados a tecnologia, tomada de decisão e até organização de projetos, firmando os conhecimento de:
+
+- **Distributed Systems**
+- **Fault-Tolerant Systems**
+- **Scalability**
+- **Reliability Engineering**
+- **System Design**
+- **Clean Architecture**
+- **Functional Programming**
+- **Vavr**
+- **Arrow Kt**
+- **Kotlin**
+- **Java**
+- **Golang**
+- **Clojure**
+- **Reactive Stack**
+- **SOLID**
+- **Spring Boot**
+- **Spring Cloud**
+- **Python**
+
+>Ser sênior é medido por duas coisas, sua **experiência** e suas **habilidades tecnicas**.
+
+#### Minha Biblioteca Virtual - (Se trata de uma lista incremental, ao longo do anos acrescento mais livros de acordo com o que estou trabalhando)
 
 #### 1. The staff engineers path
 
-![Consumers vs Partitions](../assets/livros-ebooks/staff-engineer-pathjpg)
+![he staff engineers path](../assets/livros-ebooks/staff-engineer-pathjpg)
 
 ##### Descrisão do livro
 O caminho do engenheiro de equipe (edição em inglês)
@@ -37,7 +60,7 @@ Wendy Tremont King, uma atriz com formação clássica e marionetista talentosa,
 
 #### 6. Patterns Of Enterprise Application Architecture
 
-![Consumers vs Partitions](../assets/livros-ebooks/76d3a543-9661-4f97-8d58-55779a16bd5a.jpeg)
+![Patterns Of Enterprise Application Architecture](../assets/livros-ebooks/76d3a543-9661-4f97-8d58-55779a16bd5a.jpeg)
 
 ##### Descrisão do livro
 
@@ -64,8 +87,80 @@ Os tópicos abordados incluem:
 
 #### 7. Padrões de Projetos
 
-![Consumers vs Partitions](../assets/livros-ebooks/padroes-de-projetos.jpeg)
+![Padrões de Projetos](../assets/livros-ebooks/padroes-de-projetos.jpeg)
 
 ##### Descrisão do livro
 
 ##### Sobre o Autor
+
+#### 8. Ultra Aprendizagem
+
+![Ultra Aprendizagem](../assets/livros-ebooks/Ultra-Apredizagem.jpg)
+
+#### 9. Programador Pragmatico
+
+![Programador Pragmatico](../assets/livros-ebooks/Programador-Pragmatico.jpg)
+
+#### 10. Entendo Algoritmos
+
+![Entendo Algoritmos](../assets/livros-ebooks/Entendo-Algoritmos.jpg)
+
+#### 11. Estrutura de dados com algoritmos com JavaScript °2 Edição
+
+![Estrutura de dados com algoritmos com JavaScript °2 Edição](../assets/livros-ebooks/Estrutura-dados-javascript.jpg)
+
+#### 12. Optimization by GRASP: Greedy Randomized Adaptive Search Procedures
+
+![Optimization by GRASP](../assets/livros-ebooks/Optimization.jpg)
+
+#### 13. Deep Learning for Coders with fastai & PyTorch: AI Applications Without a PhD
+
+![Deep Learning for Coders with fastai & PyTorch](../assets/livros-ebooks/Deep-Learning-for-Coders-with-fastai.jpg)
+
+#### 14. Hands-on Convolutional Neural Networks with TensorFlow: Solve computer vision problems with modeling in TensorFlow and Python
+
+![Hands-on Convolutional Neural Networks with TensorFlow](../assets/livros-ebooks/Hands-on-Convolutional-Neural.jpg)
+
+#### 15. Learning Domain-Driven Design (English Edition)
+
+![Learning Domain-Driven Design](../assets/livros-ebooks/Learning-Domain-Driven-Design.jpg)
+
+#### 16. Código limpo: habilidades práticas do Agile Software
+
+![Código limpo: habilidades práticas do Agile Software](../assets/livros-ebooks/Código-limpo.jpg)
+
+#### 17. Programming Kotlin: Familiarize yourself with all of kotlin's features with this in-depth guide (Em Inglês)
+
+![Programming Kotlin](../assets/livros-ebooks/Programming-Kotlin.jpg)
+
+#### 18. Programação Shell Linux - 8 Ed.
+
+![Programação Shell Linux](../assets/livros-ebooks/Programaccao-Shell-Linux.jpg)
+
+#### 19. Fundamentals of Software Architecture: An Engineering Approach (English Edition)
+
+![Fundamentals of Software Architecture](../assets/livros-ebooks/Fundamentals-of-Software-Architecture.jpg)
+
+#### 20. System Design Interview – An insider's guide (English Edition)
+
+![System Design Interview](../assets/livros-ebooks/System-Design-Interview.jpg)
+
+#### 21. System Design Interview – An Insider's Guide: Volume 2 (English Edition)
+
+![System Design Interview 2](../assets/livros-ebooks/System-Design-Interview-2.jpg)
+
+#### 22. Domain-Driven Design: Tackling Complexity in the Heart of Software (English Edition)
+
+![Domain-Driven Design](../assets/livros-ebooks/Domain-Driven-Design.jpg)
+
+#### 23. Refactoring: Improving the Design of Existing Code (Addison-Wesley Signature Series (Fowler)) (English Edition)
+
+![Refactoring](../assets/livros-ebooks/Refactoring.jpg)
+
+#### 24. Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series) (English Edition)
+
+![Clean Architecture](../assets/livros-ebooks/Clean%20Architecture.jpg)
+
+#### 25. Agile Principles, Patterns, and Practices in C# (Robert C. Martin Series) (English Edition)
+
+![Agile Principles](../assets/livros-ebooks/Agile-Principles.jpg)

@@ -142,3 +142,6 @@ O diagrama a seguir mostra como essas bibliotecas interagem entre si.
 Como utilizar o DynamoDB Stream para construir uma solução com MSK Kafka, para um fluxo de Stream de Dados ?
 
 >Farei uma poc, com as tecnologias sitadas no console da AWS, e irei documentar o procedimento por aqui.
+
+#### Referências
+https://medium.com/lumigo/the-best-reason-to-use-dynamodb-streams-is-6573fa2a511f

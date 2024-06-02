@@ -14,7 +14,7 @@ Em meados de 2019, comecei a estudar Ciência da Computação em uma universidad
 
 Entrei na empresa como Júnior, trabalhando com testes de software. Em poucos meses, tornei-me uma referência na área. Como sempre gostei de código, comecei a pegar tarefas de desenvolvedores. Na época, a squad em que eu estava tinha poucos desenvolvedores, então comecei a colocar meus conhecimentos em prática com projetos usando Spring Framework e Java 8 para o lado servidor, além de robôs de automação e uma mistura de controladores com ChaplinJs e BackboneJs para o lado cliente. Em seguida, trabalhei com diversas arquiteturas Java 8 e 11 com Spring Boot, fornecendo APIs REST para aplicativos AngularJs.
 
-Desde 2017, ajudo desenvolvedores a aprimorar suas habilidades e a construir serviços distribuídos na nuvem, escaláveis, tolerantes a falhas e confiáveis para milhões de usuários.
+Desde 2017, estudo para aprimorar minhas habilidades e a construir serviços distribuídos na nuvem, escaláveis, tolerantes a falhas e confiáveis para milhões de usuários.
 
 💬 Fale comigo sobre: Sistemas Distribuídos, Sistemas Tolerantes a Falhas, Escalabilidade, Engenharia de Confiabilidade, Design de Sistemas, Arquitetura Limpa, Programação Funcional, Vavr, Arrow Kt, Kotlin, Java, Golang, Clojure, Pilha Reativa, SOLID, Spring Boot, e Spring Nuvem.
 

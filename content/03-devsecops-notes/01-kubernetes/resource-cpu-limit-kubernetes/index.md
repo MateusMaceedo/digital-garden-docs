@@ -11,7 +11,7 @@ weight: 2
 
 >Vamos olhar para o core/núcleo de um processador, ele é capaz de processar uma única operação por vez, não tem mágica, você manda a operação ele processa e retorna. Se você tem dois cores, então… adivinha só ? duas operações por vez. Pera ai, mas e para processadores com Hyper Threading ? Não se engane, o core/núcleo do processador continua processando task a task, uma por vez, a tecnologia Hyper Threading (presente em processadores intel) mantém o core mais tempo processando do que ocioso, ou seja, usa melhor o tempo, mas nada mudou no núcleo, continuamos não podendo paralelizar as tarefas.
 
-![Limit CPU Kubernetes](../assets/resource-cpu-limit-kubernetes.png)
+![Limit CPU Kubernetes](/content/03-devsecops-notes/01-kubernetes/assets/resource-cpu-limit-kubernetes.png)
 
 Falamos um pouco da camada de hardware, agora vamos para a camada de software. Para simplificar, vamos imaginar um processador com apenas 1 core **(um Intel 4004, talvez ? :D)**. Se você simplificar as coisas e pensar que 1 core pode processar 1 task por vez, e você tiver uma task que vai levar 10min 😩 para terminar, significa que seu processador vai ficar processando apenas esta task por 10min, o que obviamente travaria todo seu Sistema Operacional. Imagina, enquanto você está baixando um arquivo você não iria conseguir mexer o mouse, digitar no teclado, ou escutar uma música 😡.
 

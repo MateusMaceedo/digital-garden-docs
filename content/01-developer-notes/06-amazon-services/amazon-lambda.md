@@ -9,7 +9,7 @@ weight: 2
 
 **API REST** que será usada para invocar uma função do Lambda usando uma solicitação **HTTP**. A função do **Lambda** executará operações de criação, leitura, atualização e exclusão **(CRUD)** em uma tabela do **DynamoDB**. Essa função será fornecida aqui para fins de demonstração, com essa configuração sera possivel uma **API REST** do **API Gateway** que pode invocar qualquer função do **Lambda**.
 
-Por natureza a Lambda já nasce escalavel, o ***API Gateway*** suporta mil ***TPS*** e as ***Lambdas*** são invocadas por demanda. Tirando o ***Code Start***, a faixa de resposta sem serviços externos é em média 0,5 ms.
+Por natureza a Lambda já nasce escalavel, o ***API Gateway*** suporta mil ***TPS*** e as ***Lambdas*** são invocadas por demanda. Tirando o ***Code Start***, que no caso de utilizar o Golang para codar a lambda, temos 1000 mil segundos para a inicialização, já a faixa de resposta sem serviços externos é em média 0,5 ms.
 
 A ideia é ter o ***Gateway*** chamando as functions, uma rota por ***Lambda***. que por sua vez tem ***1M*** de chamadas gratuitas por mês.
 
@@ -63,7 +63,7 @@ def lambda_handler(event, context):
         raise ValueError('Operação não conhecida "{}", verifique o contrato da API e tente novamente.'.format(operation))
 ```
 
-Montei uma demo mais estrutura, para a realização dessa integração, segue o [link](https://github.com/MateusMaceedo/APIGatewayAWSLambda) do github.
+Montei uma demo mais estruturada, para a realização dessa integração, segue o [link](https://github.com/MateusMaceedo/APIGatewayAWSLambda) do github.
 
 ##### Referencias
 - https://docs.aws.amazon.com/pt_br/lambda/latest/dg/services-apigateway-tutorial.html

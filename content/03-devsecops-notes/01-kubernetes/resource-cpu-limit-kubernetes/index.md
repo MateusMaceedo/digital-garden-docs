@@ -1,6 +1,6 @@
 ---
 title: "Resource CPU Limit no Kubernetes"
-weight: 2
+weight: 1
 ---
 
 ---

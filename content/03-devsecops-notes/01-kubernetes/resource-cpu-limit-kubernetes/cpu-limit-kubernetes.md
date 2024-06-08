@@ -3,7 +3,7 @@ title: "CPU Limit no Kubernetes"
 weight: 2
 ---
 
-### Não configure Resource CPU Limit no Kubernetes
+#### Não configure Resource CPU Limit no Kubernetes
 
 >Contexto em como a alocação de CPU funciona no Kernel do Linux.
 

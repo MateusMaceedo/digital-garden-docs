@@ -3,7 +3,52 @@ title: "Principios do Java"
 weight: 3
 ---
 
->Conceitos que geralmente são questionados em entrevistas
+### Conceitos e Evoluções do Java
+
+#### Conceitos Básicos
+
+Os conceitos fundamentais da linguagem Java permanecem consistentes, mesmo com as muitas mudanças significativas ao longo dos anos que melhoraram seu desempenho em larga escala. A programação concorrente e o controle de fluxos futuros são exemplos de áreas que evoluíram. No entanto, os conceitos principais e básicos da linguagem, como orientação a objetos, encapsulamento, herança e polimorfismo, nunca mudam, apenas passam por evoluções.
+
+Baseando-me em leituras de livros e vídeos do YouTube, alimento essas anotações com conhecimentos e experiências práticas do dia a dia. Gosto de realizar novos testes com diferentes abordagens e documentar os resultados aqui. Por exemplo, gerar downtime em muitos deploys é uma prática comum que pode ser aprimorada com novas técnicas.
+
+#### JVM e Performance
+
+A Java Virtual Machine (JVM) utiliza os recursos da máquina física para funcionar, o que levou ao jargão entre programadores de que o Java é lento. Isso se deve à sobrecarga de tradução de bytecode Java para linguagem de máquina nativa, realizada "por baixo dos panos". Contudo, as melhorias contínuas na JVM têm reduzido significativamente essas limitações.
+
+#### JTB e a Evolução para Spring Boot
+
+##### JTB: Uma Plataforma Verbosa
+
+JTB era uma plataforma conhecida por sua verbosidade e complexidade na inicialização e testabilidade. Todas as dependências eram acopladas, incluindo o banco de dados, o sistema de mensageria e as chamadas remotas, dificultando a manutenção e a escalabilidade.
+
+##### Tomcat
+
+O Tomcat era um servidor onde várias aplicações eram hospedadas. Os arquivos .war eram implantados e o servidor ficava fazendo polling até que o novo processo fosse iniciado.
+
+##### Spring Boot
+
+O Spring Boot trouxe uma mudança significativa ao permitir que cada aplicação fosse executada em um contêiner de servidor de aplicação próprio, geralmente um .jar. Isso significa que cada aplicação roda em seu próprio contêiner de servidor, como Tomcat ou Undertow, embutido, simplificando a implantação e melhorando a isolação entre aplicações.
+
+##### Tempo de Inicialização
+
+Criar uma aplicação em Java envolve subir um servidor de aplicação embutido, inicializar a JVM e, em seguida, iniciar a aplicação. Esse processo pode levar de 30 a 40 segundos.
+
+##### Configuração Programática
+
+Anteriormente, a configuração das aplicações Java era feita em XML. Atualmente, com o Spring Boot, as configurações passaram a ser programáticas e baseadas em Java. O Spring Boot encapsula essas configurações em arquivos `application.yml` ou `application.properties`, simplificando a configuração e a manutenção das aplicações.
+
+### GraalVM
+
+GraalVM é uma máquina virtual poliglota de alto desempenho desenvolvida pela Oracle. Seu objetivo é proporcionar um ambiente de execução unificado para diversas linguagens de programação, como Java, JavaScript, Python, Ruby, R, e também suportar linguagens como LLVM e WebAssembly. GraalVM melhora o desempenho de aplicativos e simplifica o desenvolvimento poliglota, permitindo que diferentes linguagens interajam entre si com baixo overhead.
+
+### Artefatos Finais
+
+Os artefatos finais das aplicações Java são geralmente arquivos .war ou .jar. O formato .jar tornou-se um padrão para empacotar aplicações Java, especialmente com o advento do Spring Boot, que encapsula tudo em um único arquivo executável .jar, facilitando a implantação e execução de aplicações Java.
+
+### Webflux
+Cada thread responde a uma unica requisição por usuario.
+
+A thread inicia com 2 a 3 megas, pra você iniciar a stack em cima dela.
 
 #### Sintaxe básica
 - Variáveis

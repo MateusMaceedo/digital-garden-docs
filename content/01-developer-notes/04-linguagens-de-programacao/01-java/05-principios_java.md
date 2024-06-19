@@ -1452,7 +1452,7 @@ Qual a diferença de override para overload ?
    - Usado em herança.
    - Implementação específica na subclasse.
 
-- **Overload (Sobrecarga)**
+- **Overload (Sobrecarga)
    - Mesmo nome do método, mas parâmetros diferentes.
    - Pode ocorrer na mesma classe ou em subclasses.
    - Permite diferentes formas de usar o mesmo método dependendo dos parâmetros.

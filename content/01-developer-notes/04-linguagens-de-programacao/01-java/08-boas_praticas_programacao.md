@@ -30,34 +30,34 @@ Baixo acoplamento siginifica garantir que as funcionalidades do sistema estejam 
    - **Benefício**: Facilita a manutenção e evolução do código, pois cada classe tem um único propósito.
 
    **Exemplo de SRP**:
-  ```java
-  // Classe violando SRP
-  public class User {
-      public void login(String username, String password) {
-          // lógica de login
-      }
-      public void save() {
-          // lógica de salvar no banco de dados
-      }
-  }
+   ```java
+   // Classe violando SRP
+   public class User {
+       public void login(String username, String password) {
+           // lógica de login
+       }
+       public void save() {
+           // lógica de salvar no banco de dados
+       }
+   }
 
-  // Refatorado para seguir SRP
-  public class User {
-      // atributos e métodos relacionados ao usuário
-  }
+   // Refatorado para seguir SRP
+   public class User {
+       // atributos e métodos relacionados ao usuário
+   }
 
-  public class UserService {
-      public void login(String username, String password) {
-          // lógica de login
-      }
-  }
+   public class UserService {
+       public void login(String username, String password) {
+           // lógica de login
+       }
+   }
 
-  public class UserRepository {
-      public void save(User user) {
-          // lógica de salvar no banco de dados
-      }
-  }
-  ```
+   public class UserRepository {
+       public void save(User user) {
+           // lógica de salvar no banco de dados
+       }
+   }
+   ```
 
 2. **Open/Closed Principle (OCP) - Princípio do Aberto/Fechado**:
 
@@ -65,42 +65,42 @@ Baixo acoplamento siginifica garantir que as funcionalidades do sistema estejam 
    - **Benefício**: Permite a adição de novas funcionalidades sem alterar o código existente, minimizando o risco de introduzir novos bugs.
 
    **Exemplo de OCP**:
-  ```java
-  // Classe violando OCP
-  public class PaymentProcessor {
-      public void processCreditCard(CreditCard card) {
-          // lógica de processamento de cartão de crédito
-      }
-      public void processPayPal(PayPalAccount account) {
-          // lógica de processamento de PayPal
-      }
-  }
+   ```java
+   // Classe violando OCP
+   public class PaymentProcessor {
+       public void processCreditCard(CreditCard card) {
+           // lógica de processamento de cartão de crédito
+       }
+       public void processPayPal(PayPalAccount account) {
+           // lógica de processamento de PayPal
+       }
+   }
 
-  // Refatorado para seguir OCP
-  public interface PaymentMethod {
-      void processPayment();
-  }
+   // Refatorado para seguir OCP
+   public interface PaymentMethod {
+       void processPayment();
+   }
 
-  public class CreditCard implements PaymentMethod {
-      @Override
-      public void processPayment() {
-          // lógica de processamento de cartão de crédito
-      }
-  }
+   public class CreditCard implements PaymentMethod {
+       @Override
+       public void processPayment() {
+           // lógica de processamento de cartão de crédito
+       }
+   }
 
-  public class PayPal implements PaymentMethod {
-      @Override
-      public void processPayment() {
-          // lógica de processamento de PayPal
-      }
-  }
+   public class PayPal implements PaymentMethod {
+       @Override
+       public void processPayment() {
+           // lógica de processamento de PayPal
+       }
+   }
 
-  public class PaymentProcessor {
-      public void processPayment(PaymentMethod method) {
-          method.processPayment();
-      }
-  }
-  ```
+   public class PaymentProcessor {
+       public void processPayment(PaymentMethod method) {
+           method.processPayment();
+       }
+   }
+   ```
 
 3. **Liskov Substitution Principle (LSP) - Princípio da Substituição de Liskov**:
 

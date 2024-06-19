@@ -279,16 +279,16 @@ Principais Design Patterns (Padrões de Projeto), classificados nas três catego
 |                     | **Visitor**                 | Representa uma operação a ser executada nos elementos de uma estrutura de objetos. Permite definir uma nova operação sem mudar as classes dos elementos sobre os quais opera. | Implementação de operações que precisam ser realizadas em diferentes tipos de elementos de uma estrutura, como operações de análise e transformação de árvores. |
 
 Explicação:
-- Categoria: A categoria do padrão (Criacionais, Estruturais, Comportamentais).
-- Padrão: O nome do padrão de projeto.
-- Descrição: Uma breve descrição do padrão e seu propósito.
-- Exemplo de Uso: Um exemplo de aplicação prática do padrão.
+- **Categoria**: A categoria do padrão (Criacionais, Estruturais, Comportamentais).
+- **Padrão**: O nome do padrão de projeto.
+- **Descrição**: Uma breve descrição do padrão e seu propósito.
+- **Exemplo de Uso**: Um exemplo de aplicação prática do padrão.
 
 Esta tabela cobre os principais padrões de projeto, suas definições e exemplos de uso, fornecendo uma visão geral útil para engenheiros de software que desejam aplicar esses conceitos em seus projetos.
 
 ##### Topicos a dominar
-- Técnicas de refatoração
-- Designe Patterns
-- SOLID
-- Clean Code
-- Dominio do funcionamento dos Frameworks
+- **Técnicas de refatoração**
+- **Designe Patterns**
+- **SOLID**
+- **Clean Code**
+- **Dominio do funcionamento dos Frameworks**

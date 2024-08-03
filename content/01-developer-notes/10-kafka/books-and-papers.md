@@ -3,7 +3,7 @@ title: "Kafka: Books And Papers"
 weight: 2
 ---
 
->Os livros que influenciam as melhores praticas abordando o Apachee Kafka e/ou o assunto de streaming de eventos em geral.
+>Os livros que influenciam as melhores praticas abordando o Apache Kafka e/ou o assunto de streaming de eventos em geral.
 
 #### 1. Kafka The Definite Guide
 
